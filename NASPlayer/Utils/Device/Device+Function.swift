@@ -77,8 +77,8 @@ extension Device {
         case "iPhone15,4": return iPhone15
         case "iPhone15,5": return iPhone15Plus
             
-        case "iPhone16,2": return iPhone15Pro
-        case "iPhone16,3": return iPhone15ProMax
+        case "iPhone16,1": return iPhone15Pro
+        case "iPhone16,2": return iPhone15ProMax
             
         case "i386", "x86_64", "arm64":
             return simulator(

@@ -85,6 +85,7 @@ extension Color {
 
 extension Color {
     static let lightRed = Color(#colorLiteral(red: 1, green: 0.21, blue: 0.37, alpha: 1))
+    static let paleGray = Color(#colorLiteral(red: 0.9467977881, green: 0.9467977881, blue: 0.9467977881, alpha: 1))
     static let lightGray = Color(#colorLiteral(red: 0.44, green: 0.44, blue: 0.44, alpha: 1.00))
     static let extraLightGray = Color(#colorLiteral(red: 0.65, green: 0.65, blue: 0.65, alpha: 1.00))
     static let darkGray = Color(#colorLiteral(red: 0.31, green: 0.31, blue: 0.31, alpha: 1.00))

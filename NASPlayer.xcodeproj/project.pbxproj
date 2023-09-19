@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC9EDFD02AB9C09B00847101 /* MultiRowLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9EDFCF2AB9C09B00847101 /* MultiRowLabelStyle.swift */; };
 		FCABF7F32AB97B0F00B7E5BA /* NASPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF7F22AB97B0F00B7E5BA /* NASPlayerApp.swift */; };
 		FCABF7F52AB97B0F00B7E5BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF7F42AB97B0F00B7E5BA /* ContentView.swift */; };
 		FCABF7F72AB97B1000B7E5BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCABF7F62AB97B1000B7E5BA /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC9EDFCF2AB9C09B00847101 /* MultiRowLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiRowLabelStyle.swift; sourceTree = "<group>"; };
 		FCABF7EF2AB97B0F00B7E5BA /* NASPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCABF7F22AB97B0F00B7E5BA /* NASPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASPlayerApp.swift; sourceTree = "<group>"; };
 		FCABF7F42AB97B0F00B7E5BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC9EDFCE2AB9C08200847101 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				FC9EDFCF2AB9C09B00847101 /* MultiRowLabelStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		FCABF7E62AB97B0F00B7E5BA = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +206,7 @@
 		FCABF81C2AB97BF800B7E5BA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FC9EDFCE2AB9C08200847101 /* Styles */,
 				FCABF81E2AB97C0F00B7E5BA /* Device */,
 				FCABF81F2AB97C1A00B7E5BA /* Extensions */,
 				FCABF8202AB97C2000B7E5BA /* Formatters */,
@@ -473,6 +484,7 @@
 				FCABF8502AB980F000B7E5BA /* SongVM.swift in Sources */,
 				FCABF8482AB980A700B7E5BA /* Album.swift in Sources */,
 				FCABF83B2AB97F6000B7E5BA /* SongCount.swift in Sources */,
+				FC9EDFD02AB9C09B00847101 /* MultiRowLabelStyle.swift in Sources */,
 				FCABF84A2AB980B800B7E5BA /* Response.swift in Sources */,
 				FCABF82B2AB97DF600B7E5BA /* Device+Param.swift in Sources */,
 				FCABF83D2AB97F6E00B7E5BA /* Time.swift in Sources */,
