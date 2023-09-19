@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct AlbumListView: View {
+    
+    @ObservedObject var albumListRequest = AlbumListRequest()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.vertical, showsIndicators: false) {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 5)], spacing: 0) {
+                if let albums = self.albumListRequest.albumList {
+                    ForEach(albums) { album in
+                        NavigationLink {
+                            AlbumDetailView(album: album)
+                        } label: {
+                            AlbumCardView(album: album).padding(.vertical, 10)
+                        }
+                    }
+                }
+            }
+            Spacer()
+                .frame(height: 60)
+        }
+        .navigationTitle("Albums")
+        .padding(.horizontal)
     }
 }
 

@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+public func parse(genres: String) -> String {
+    var genreList = genres.components(separatedBy: ";")
+    genreList = genreList.map { $0.trimmingCharacters(in: .whitespaces) }
+    return genreList.joined(separator: " · ")
+}

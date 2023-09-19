@@ -9,7 +9,41 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            
+            NavigationStack {
+                BrowseView()
+            }
+            .tabItem {
+                Image(systemName: "viewfinder.circle")
+                Text("Browse")
+            }
+            
+            NavigationStack {
+                AlbumListView()
+            }
+            .tabItem {
+                Image(systemName: "play.square.stack.fill")
+                Text("Albums")
+            }
+            
+            NavigationStack {
+                PlaylistView()
+            }
+            .tabItem {
+                Image(systemName: "music.note.list")
+                Text("Playlists")
+            }
+            
+            NavigationStack {
+                MeView()
+            }
+            .tabItem {
+                Image(systemName: "person.crop.circle.fill")
+                Text("Me")
+            }
+            
+        }
     }
 }
 
