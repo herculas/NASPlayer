@@ -13,7 +13,7 @@
 		FC0C99CB2ABB1CEF00259897 /* PlaylistEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C99CA2ABB1CEF00259897 /* PlaylistEntryView.swift */; };
 		FC0C99CD2ABB1D1E00259897 /* PlaylistDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C99CC2ABB1D1E00259897 /* PlaylistDetailRequest.swift */; };
 		FC0C99CF2ABB225600259897 /* PlaylistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C99CE2ABB225500259897 /* PlaylistDetailView.swift */; };
-		FC0C99D32ABB253A00259897 /* DetailCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C99D22ABB253A00259897 /* DetailCoverView.swift */; };
+		FC9120992ABB325900D50361 /* SongCoverRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9120982ABB325900D50361 /* SongCoverRequest.swift */; };
 		FC9EDFD02AB9C09B00847101 /* MultiRowLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9EDFCF2AB9C09B00847101 /* MultiRowLabelStyle.swift */; };
 		FCABF7F32AB97B0F00B7E5BA /* NASPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF7F22AB97B0F00B7E5BA /* NASPlayerApp.swift */; };
 		FCABF7F52AB97B0F00B7E5BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF7F42AB97B0F00B7E5BA /* ContentView.swift */; };
@@ -79,7 +79,7 @@
 		FC0C99CA2ABB1CEF00259897 /* PlaylistEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistEntryView.swift; sourceTree = "<group>"; };
 		FC0C99CC2ABB1D1E00259897 /* PlaylistDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailRequest.swift; sourceTree = "<group>"; };
 		FC0C99CE2ABB225500259897 /* PlaylistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailView.swift; sourceTree = "<group>"; };
-		FC0C99D22ABB253A00259897 /* DetailCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoverView.swift; sourceTree = "<group>"; };
+		FC9120982ABB325900D50361 /* SongCoverRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCoverRequest.swift; sourceTree = "<group>"; };
 		FC9EDFCF2AB9C09B00847101 /* MultiRowLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiRowLabelStyle.swift; sourceTree = "<group>"; };
 		FCABF7EF2AB97B0F00B7E5BA /* NASPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCABF7F22AB97B0F00B7E5BA /* NASPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASPlayerApp.swift; sourceTree = "<group>"; };
@@ -150,14 +150,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FC0C99D02ABB250F00259897 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				FC0C99D22ABB253A00259897 /* DetailCoverView.swift */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		FC9EDFCE2AB9C08200847101 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,7 +234,6 @@
 			children = (
 				FCABF7F42AB97B0F00B7E5BA /* ContentView.swift */,
 				FCABF8672AB9828100B7E5BA /* MainTabView.swift */,
-				FC0C99D02ABB250F00259897 /* Common */,
 				FCABF8582AB9817800B7E5BA /* Browse */,
 				FCABF8572AB9817100B7E5BA /* Album */,
 				FCABF85A2AB9818300B7E5BA /* Playlist */,
@@ -319,6 +310,7 @@
 		FCABF8452AB9808A00B7E5BA /* Request Wrappers */ = {
 			isa = PBXGroup;
 			children = (
+				FC9120982ABB325900D50361 /* SongCoverRequest.swift */,
 				FCABF8552AB9815400B7E5BA /* AlbumListRequest.swift */,
 				FCABF8512AB9811000B7E5BA /* AlbumCoverRequest.swift */,
 				FCABF8532AB9813A00B7E5BA /* AlbumDetailRequest.swift */,
@@ -528,9 +520,9 @@
 				FCABF8662AB9823F00B7E5BA /* AlbumDetailView.swift in Sources */,
 				FCABF8562AB9815400B7E5BA /* AlbumListRequest.swift in Sources */,
 				FC0C99C72ABB130E00259897 /* PlaylistVM.swift in Sources */,
-				FC0C99D32ABB253A00259897 /* DetailCoverView.swift in Sources */,
 				FCABF8412AB97F8D00B7E5BA /* Request.swift in Sources */,
 				FCABF8352AB97F2600B7E5BA /* Dictionary+.swift in Sources */,
+				FC9120992ABB325900D50361 /* SongCoverRequest.swift in Sources */,
 				FCABF8232AB97C5200B7E5BA /* Device.swift in Sources */,
 				FC0C99CF2ABB225600259897 /* PlaylistDetailView.swift in Sources */,
 				FCABF8272AB97D2A00B7E5BA /* Device+CustomString.swift in Sources */,

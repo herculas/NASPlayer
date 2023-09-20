@@ -21,7 +21,7 @@ struct AlbumDetailView: View {
     
     var body: some View {
         List {
-            DetailCoverView(cover: self.albumCoverRequest.image)
+            albumCover(cover: self.albumCoverRequest.image)
             albumTitle(album: self.album, songs: self.albumDetailRequest.songs)
             buttonLine(songs: self.albumDetailRequest.songs)
             songList(songs: self.albumDetailRequest.songs)
@@ -29,6 +29,30 @@ struct AlbumDetailView: View {
         }
         .listStyle(.inset)
         .navigationBarTitleDisplayMode(.inline)
+    }
+    
+    @ViewBuilder
+    private func albumCover(cover: UIImage?) -> some View {
+        HStack {
+            Spacer()
+            if let cover = cover {
+                VStack {
+                    Image(uiImage: cover)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(12)
+                        .frame(maxWidth: 280, maxHeight: 280)
+                        .shadow(radius: 5)
+                        .padding(.bottom, 5)
+                }
+                .frame(height: 280)
+            } else {
+                ProgressView()
+                    .frame(width: 280, height: 280)
+            }
+            Spacer()
+        }
+        .listRowSeparator(.hidden)
     }
     
     @ViewBuilder
