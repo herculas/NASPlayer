@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class Request: NSObject, ObservableObject {
+final class RequestWrapper: NSObject, ObservableObject {
     
     @Published var isLoading: Bool = false
     
@@ -120,7 +120,7 @@ final class Request: NSObject, ObservableObject {
     }
 }
 
-extension Request: URLSessionDelegate {
+extension RequestWrapper: URLSessionDelegate {
     public func urlSession(
         _ session: URLSession,
         didReceive challenge: URLAuthenticationChallenge,

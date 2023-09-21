@@ -9,12 +9,12 @@ import SwiftUI
 
 struct AlbumListView: View {
     
-    @ObservedObject var albumListRequest = AlbumListRequest()
+    @ObservedObject var albumListService = AlbumListService()
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 5)], spacing: 0) {
-                if let albums = self.albumListRequest.albumList {
+                if let albums = self.albumListService.albumList {
                     ForEach(albums) { album in
                         NavigationLink {
                             AlbumDetailView(album: album)

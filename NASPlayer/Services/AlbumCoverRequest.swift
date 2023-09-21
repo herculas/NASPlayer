@@ -1,16 +1,15 @@
 //
-//  SongCoverRequest.swift
+//  AlbumCoverRequest.swift
 //  NASPlayer
 //
-//  Created by 宋睿 on 20/9/2023.
+//  Created by 宋睿 on 19/9/2023.
 //
 
 import SwiftUI
 
-// TODO: 
-class SongCoverRequest: ObservableObject {
+class AlbumCoverRequest: ObservableObject {
     
-    var request = Request()
+    var request = RequestWrapper()
     
     @Published var isLoading = true
     @Published var error: Error?

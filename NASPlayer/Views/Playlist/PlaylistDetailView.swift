@@ -20,7 +20,7 @@ struct PlaylistDetailView: View {
     
     var body: some View {
         List {
-            playlistCover(cover: self.albumCoverRequest.image)
+//            playlistCover(cover: self.albumCoverRequest.image)
         }
         .listStyle(.inset)
         .navigationBarTitleDisplayMode(.inline)
@@ -52,6 +52,6 @@ struct PlaylistDetailView: View {
     
 }
 
-#Preview {
-    PlaylistDetailView()
-}
+//#Preview {
+//    PlaylistDetailView()
+//}

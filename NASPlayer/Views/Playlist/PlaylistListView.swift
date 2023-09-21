@@ -9,11 +9,11 @@ import SwiftUI
 
 struct PlaylistListView: View {
     
-    @ObservedObject var playlistListRequest = PlaylistListRequest()
+    @ObservedObject var playlistsService = PlaylistsService()
     
     var body: some View {
         List {
-            if let playlists = self.playlistListRequest.playlists {
+            if let playlists = self.playlistsService.playlists {
                 ForEach(playlists) { playlist in
                     Text(playlist.name)
                 }

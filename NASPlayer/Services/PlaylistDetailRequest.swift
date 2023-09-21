@@ -9,7 +9,7 @@ import Foundation
 
 class PlaylistDetailRequest: ObservableObject {
     
-    var request = Request()
+    var request = RequestWrapper()
     
     @Published var isLoading = true
     @Published var error: Error?
