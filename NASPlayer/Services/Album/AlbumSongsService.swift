@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class AlbumSongsService: ObservableObject {
-    var songsRequest = SongRequest()
+    var songRequest = SongRequest()
     var cancellable: AnyCancellable?
     
     @Published var songs: [Int: [SongVM]]?
@@ -24,7 +24,7 @@ class AlbumSongsService: ObservableObject {
     }
     
     func trigger(album: String) {
-        self.cancellable = self.songsRequest
+        self.cancellable = self.songRequest
             .songsPublisher(album: album)
             .subscribe(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in

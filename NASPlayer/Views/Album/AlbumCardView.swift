@@ -10,21 +10,21 @@ import SwiftUI
 struct AlbumCardView: View {
     
     var album: AlbumVM
-    @ObservedObject var albumCoverRequest: AlbumCoverRequest
+    @ObservedObject var albumCoverService: AlbumCoverService
     
     init(album: AlbumVM) {
         self.album = album
-        self.albumCoverRequest = AlbumCoverRequest(album: self.album)
+        self.albumCoverService = AlbumCoverService(album: album)
     }
     
     var body: some View {
         VStack(alignment: .leading) {
-            if let cover = self.albumCoverRequest.image {
+            if let cover = self.albumCoverService.image {
                 Image(uiImage: cover)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 180, height: 180)
-                    .cornerRadius(12)
+                    .clipShape(.rect(cornerRadius: 12))
                     .shadow(radius: 5, x: 0, y: 0)
             } else {
                 ProgressView()

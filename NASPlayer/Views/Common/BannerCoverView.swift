@@ -1,5 +1,5 @@
 //
-//  DetailCoverView.swift
+//  BannerCoverView.swift
 //  NASPlayer
 //
 //  Created by 宋睿 on 21/9/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DetailCoverView: View {
+struct BannerCoverView: View {
     
     var cover: UIImage?
     
@@ -19,7 +19,7 @@ struct DetailCoverView: View {
                     Image(uiImage: cover)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .cornerRadius(12)
+                        .clipShape(.rect(cornerRadius: 12))
                         .frame(maxWidth: 280, maxHeight: 280)
                         .shadow(radius: 5)
                         .padding(.bottom, 5)

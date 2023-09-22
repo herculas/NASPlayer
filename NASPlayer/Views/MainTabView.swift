@@ -28,7 +28,7 @@ struct MainTabView: View {
             }
             
             NavigationStack {
-                PlaylistListView()
+                PlaylistsView()
             }
             .tabItem {
                 Image(systemName: "music.note.list")

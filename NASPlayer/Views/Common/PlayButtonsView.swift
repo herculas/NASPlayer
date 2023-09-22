@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DetailButtonRowView: View {
+struct PlayButtonsView: View {
     
     var songs: [Int: [SongVM]]?
     
@@ -25,7 +25,6 @@ struct DetailButtonRowView: View {
 }
 
 struct PlayButtonView: View {
-    
     var name: String
     var icon: String
     var padding: Bool

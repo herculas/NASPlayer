@@ -6,7 +6,7 @@
 //
 
 import Combine
-import Foundation
+import UIKit
 
 protocol Requestable {
     var reqTimeout: Float { get }
@@ -36,6 +36,30 @@ class NetworkRequestable: NSObject, Requestable {
             .mapError { error in
                 NetworkError.invalidJson(String(describing: error))
             }
+            .eraseToAnyPublisher()
+    }
+    
+    func issue(request req: Request) -> AnyPublisher<UIImage, NetworkError> {
+        let sessionConfig = URLSessionConfiguration.default
+        sessionConfig.timeoutIntervalForRequest = TimeInterval(req.timeout ?? self.reqTimeout)
+        sessionConfig.timeoutIntervalForResource = TimeInterval(self.resTimeout)
+        let session = URLSession(configuration: sessionConfig, delegate: self, delegateQueue: nil)
+        
+        return session
+            .dataTaskPublisher(for: req.getUrlRequest()!)
+            .tryMap { (data: Data, response: URLResponse) in
+                guard response is HTTPURLResponse else {
+                    throw NetworkError.serverError(code: 0, error: "Server Error!")
+                }
+                guard let image = UIImage(data: data) else {
+                    throw NetworkError.serverError(code: 0, error: "Server Error!")
+                }
+                return image
+            }
+            .mapError { error in
+                NetworkError.cannotParseData(String(describing: error))
+            }
+            .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
 }

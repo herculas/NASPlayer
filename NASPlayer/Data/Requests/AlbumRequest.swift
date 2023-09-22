@@ -33,7 +33,9 @@ enum AlbumEndpoint: Endpoint {
         ]
         return params
     }
-    var headers: [String : String] { return [:] }
+    var headers: [String : String] {
+        return [:]
+    }
 }
 
 class AlbumRequest {

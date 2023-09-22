@@ -12,6 +12,12 @@ struct PlaylistVM: Identifiable {
     var name: String
 }
 
+extension PlaylistVM: Equatable {
+    static func == (lhs: PlaylistVM, rhs: PlaylistVM) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
 func transform(from playlist: Playlist) -> PlaylistVM {
     return PlaylistVM(
         id: playlist.id,

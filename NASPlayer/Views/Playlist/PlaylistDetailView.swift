@@ -11,47 +11,31 @@ import SwiftUI
 struct PlaylistDetailView: View {
     
     var playlist: PlaylistVM
-    @ObservedObject var playlistDetailRequest: PlaylistDetailRequest
+    @ObservedObject var playlistCoverService: PlaylistCoverService
+    @ObservedObject var playlistSongsService: PlaylistSongsService
     
     init(playlist: PlaylistVM) {
         self.playlist = playlist
-        self.playlistDetailRequest = PlaylistDetailRequest(id: self.playlist.id, limit: 5000)
+        self.playlistCoverService = PlaylistCoverService(id: playlist.id)
+        self.playlistSongsService = PlaylistSongsService(id: playlist.id)
     }
     
     var body: some View {
         List {
-//            playlistCover(cover: self.albumCoverRequest.image)
+            BannerCoverView(cover: self.playlistCoverService.image).listRowSeparator(.hidden)
+            JumboTitleView(title: self.playlist.name).listRowSeparator(.hidden)
+            
+            
+//            DetailButtonRowView(songs: self.albumSongsService.songs)
+//            DetailAlbumSongsView(discs: self.albumSongsService.songs)
+//            DetailStatisticsView(count: self.albumSongsService.count, duration: self.albumSongsService.duration)
         }
         .listStyle(.inset)
         .navigationBarTitleDisplayMode(.inline)
     }
     
-    @ViewBuilder
-    private func playlistCover(cover: UIImage?) -> some View {
-        HStack {
-            Spacer()
-            if let cover = cover {
-                VStack {
-                    Image(uiImage: cover)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .cornerRadius(12)
-                        .frame(maxWidth: 280, maxHeight: 280)
-                        .shadow(radius: 5)
-                        .padding(.bottom, 5)
-                }
-                .frame(height: 280)
-            } else {
-                ProgressView()
-                    .frame(width: 280, height: 280)
-            }
-            Spacer()
-        }
-        .listRowSeparator(.hidden)
-    }
-    
 }
 
-//#Preview {
-//    PlaylistDetailView()
-//}
+#Preview {
+    PlaylistDetailView(playlist: PlaylistVM.mock)
+}

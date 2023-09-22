@@ -10,24 +10,32 @@ import SwiftUI
 struct AlbumDetailView: View {
     
     var album: AlbumVM
-    @ObservedObject var albumCoverService: AlbumCoverRequest
-    @ObservedObject var albumDetailService: AlbumSongsService
+    @ObservedObject var albumCoverService: AlbumCoverService
+    @ObservedObject var albumSongsService: AlbumSongsService
     
     init(album: AlbumVM) {
         self.album = album
-        self.albumCoverService = AlbumCoverRequest(album: self.album)
-        self.albumDetailService = AlbumSongsService(album: self.album.name)
+        self.albumCoverService = AlbumCoverService(album: album)
+        self.albumSongsService = AlbumSongsService(album: album.name)
     }
     
     var body: some View {
         List {
-            DetailCoverView(cover: self.albumCoverService.image)
+            BannerCoverView(cover: self.albumCoverService.image)
                 .listRowSeparator(.hidden)
-            DetailAlbumTitleView(album: self.album, songs: self.albumDetailService.songs)
+            JumboTitleView(
+                title: self.album.name,
+                artist: self.album.artist,
+                year: self.album.year,
+                songs: self.albumSongsService.songs
+            )
                 .listRowSeparator(.hidden)
-            DetailButtonRowView(songs: self.albumDetailService.songs)
-            DetailAlbumSongsView(discs: self.albumDetailService.songs)
-            DetailStatisticsView(count: self.albumDetailService.count, duration: self.albumDetailService.duration)
+            PlayButtonsView(songs: self.albumSongsService.songs)
+            AlbumSongListView(discs: self.albumSongsService.songs)
+            StatisticsView(
+                count: self.albumSongsService.count,
+                duration: self.albumSongsService.duration
+            )
         }
         .listStyle(.inset)
         .navigationBarTitleDisplayMode(.inline)

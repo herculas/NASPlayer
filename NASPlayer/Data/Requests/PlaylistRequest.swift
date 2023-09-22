@@ -45,7 +45,9 @@ enum PlaylistEndpoint: Endpoint {
         }
         return params
     }
-    var headers: [String : String] { return [:] }
+    var headers: [String : String] {
+        return [:]
+    }
 }
 
 class PlaylistRequest {
