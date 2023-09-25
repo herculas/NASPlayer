@@ -9,24 +9,34 @@ import SwiftUI
 
 struct AlbumSongListView: View {
     
-    var discs: [Int: [SongVM]]?
+    var songs: [SongVM]?
+    var discs: [Int : [SongVM]]?
+    
+    init(songs: [SongVM]? = nil, discs: [Int : [SongVM]]? = nil) {
+        if let songs = songs {
+            self.songs = songs
+            self.discs = Dictionary(grouping: songs, by: { $0.disc })
+        }
+    }
     
     var body: some View {
-        if let discs = discs {
+        if let discs = self.discs {
             ForEach(Array(discs.keys).sorted(by: <), id: \.self) { key in
                 Section {
-                    DiscSectionView(tracks: discs[key])
+                    AlbumDiscView(tracks: discs[key])
                 } header: {
                     if discs.count > 1 {
                         Text("Disc \(key)")
                     }
                 }
             }
+        } else {
+            EmptyView()
         }
     }
 }
 
-struct DiscSectionView: View {
+struct AlbumDiscView: View {
     
     var tracks: [SongVM]?
     

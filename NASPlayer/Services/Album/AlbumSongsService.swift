@@ -12,7 +12,7 @@ class AlbumSongsService: ObservableObject {
     var songRequest = SongRequest()
     var cancellable: AnyCancellable?
     
-    @Published var songs: [Int: [SongVM]]?
+    @Published var songs: [SongVM]?
     @Published var count: Int?
     @Published var duration: Int?
     
@@ -36,7 +36,7 @@ class AlbumSongsService: ObservableObject {
                 }
             }, receiveValue: { response in
                 if let songs = response.data?.songs {
-                    self.songs = Dictionary(grouping: songs.map(transform), by: { $0.disc })
+                    self.songs = songs.map(transform)
                     self.count = songs.count
                     self.duration = songs.reduce(0) { $0 + ($1.additional?.songAudio?.duration ?? 0) }
                 }

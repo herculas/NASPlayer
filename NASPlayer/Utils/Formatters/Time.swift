@@ -19,27 +19,6 @@ public func describe(time second: Int) -> String {
     }
 }
 
-public func convert(duration second: Int?) -> String {
-    let second = second ?? 0
-    let h = second / 3600
-    let m = (second / 60) % 60
-    var res = ""
-    
-    if h == 1 {
-        res += "\(h) hour "
-    } else if h > 1 {
-        res += "\(h) hours "
-    }
-    
-    if m <= 1 {
-        res += "\(m) minute"
-    } else {
-        res += "\(m) minutes"
-    }
-    
-    return res
-}
-
 public func getCurrentDay() -> Int {
     return Calendar.current.component(.day, from: Date())
 }

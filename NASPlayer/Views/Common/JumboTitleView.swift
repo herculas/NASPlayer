@@ -11,7 +11,7 @@ struct JumboTitleView: View {
     var title: String
     var artist: String?
     var year: Int?
-    var songs: [Int: [SongVM]]?
+    var songs: [SongVM]?
     
     var body: some View {
         HStack {
@@ -25,16 +25,19 @@ struct JumboTitleView: View {
                 
                 if let artist = self.artist {
                     Text(artist)
-                        .multilineTextAlignment(.center)
                         .font(.system(size: 16))
                         .fontWeight(.regular)
-                        .foregroundColor(.accentColor)
+                        .foregroundStyle(.accent)
                         .padding(.bottom, -1)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(2)
+                } else {
+                    Text("dasdfafsadgws")
                 }
                 
                 if let songs = self.songs {
                     HStack(spacing: 8) {
-                        if let genre = songs.first?.value.first?.genre {
+                        if let genre = songs.first?.genre {
                             Text(parse(genres: genre))
                         }
                         if let year = self.year {
@@ -42,7 +45,7 @@ struct JumboTitleView: View {
                         }
                     }
                     .font(.system(size: 10))
-                    .foregroundColor(.gray)
+                    .foregroundStyle(.secondary)
                 }
             }
             Spacer()

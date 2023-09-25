@@ -7,19 +7,26 @@
 
 import SwiftUI
 
+enum ListType {
+    case album
+    case playlist
+}
+
 struct PlayButtonsView: View {
     
-    var songs: [Int: [SongVM]]?
+    var songs: [SongVM]?
+    var type: ListType
     
     var body: some View {
         if let songs = songs {
             HStack(alignment: .center, spacing: 20) {
                 Spacer()
-                PlayButtonView(name: "Play", icon: "play.fill", padding: songs.count <= 1)
-                PlayButtonView(name: "Shuffle", icon: "shuffle", padding: songs.count <= 1)
+                PlayButtonView(name: "Play", icon: "play.fill", songs: songs)
+                PlayButtonView(name: "Shuffle", icon: "shuffle", songs: songs)
                 Spacer()
             }
             .listRowSeparator(.hidden)
+            .padding(.bottom, (Dictionary(grouping: songs, by: { $0.disc }).count > 1 &&  self.type == .album) ? 0 : 24)
         }
     }
 }
@@ -27,7 +34,7 @@ struct PlayButtonsView: View {
 struct PlayButtonView: View {
     var name: String
     var icon: String
-    var padding: Bool
+    var songs: [SongVM]
     
     var body: some View {
         Button(action: {
@@ -40,8 +47,7 @@ struct PlayButtonView: View {
         }
         .frame(width: 180, height: 45)
         .background(Color.paleGray)
-        .foregroundColor(.accentColor)
+        .foregroundStyle(Color.accentColor)
         .clipShape(.rect(cornerRadius: 10))
-        .padding(.bottom, padding ? 20 : 0)
     }
 }

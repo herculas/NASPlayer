@@ -25,13 +25,16 @@ struct AlbumDetailView: View {
                 .listRowSeparator(.hidden)
             JumboTitleView(
                 title: self.album.name,
-                artist: self.album.artist,
+                artist: self.album.albumArtist,
                 year: self.album.year,
                 songs: self.albumSongsService.songs
             )
                 .listRowSeparator(.hidden)
-            PlayButtonsView(songs: self.albumSongsService.songs)
-            AlbumSongListView(discs: self.albumSongsService.songs)
+            PlayButtonsView(
+                songs: self.albumSongsService.songs,
+                type: .album
+            )
+            AlbumSongListView(songs: self.albumSongsService.songs)
             StatisticsView(
                 count: self.albumSongsService.count,
                 duration: self.albumSongsService.duration

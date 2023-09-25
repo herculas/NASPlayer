@@ -40,7 +40,7 @@ struct AlbumCardView: View {
             Text(album.albumArtist)
                 .font(.system(size: 12))
                 .fontWeight(.regular)
-                .foregroundColor(.lightGray)
+                .foregroundStyle(Color.gray)
                 .lineLimit(1)
                 .frame(maxWidth: 175, alignment: .leading)
         }

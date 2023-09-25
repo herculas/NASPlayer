@@ -13,10 +13,23 @@ struct StatisticsView: View {
     var duration: Int?
     
     var body: some View {
-        Text(convert(song: count) + convert(duration: duration))
-            .font(.system(size: 14))
-            .foregroundColor(.gray)
-            .padding(.bottom, 60)
-            .listRowSeparator(.hidden)
+        if let count = self.count,
+           let duration = self.duration {
+            if duration / 3600 == 0 {
+                Text("\(count) songs, \((duration / 60) % 60) minutes")
+                    .font(.system(size: 14))
+                    .foregroundStyle(.secondary)
+                    .padding(.bottom, 60)
+                    .listRowSeparator(.hidden)
+                    
+            } else {
+                Text("\(count) songs, \(duration / 3600) hours \((duration / 60) % 60) minutes")
+                    .font(.system(size: 14))
+                    .foregroundStyle(.secondary)
+                    .padding(.bottom, 60)
+                    .listRowSeparator(.hidden)
+            }
+                
+        }
     }
 }

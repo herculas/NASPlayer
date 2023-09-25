@@ -22,13 +22,18 @@ struct PlaylistDetailView: View {
     
     var body: some View {
         List {
-            BannerCoverView(cover: self.playlistCoverService.image).listRowSeparator(.hidden)
-            JumboTitleView(title: self.playlist.name).listRowSeparator(.hidden)
-            
-            
-//            DetailButtonRowView(songs: self.albumSongsService.songs)
-//            DetailAlbumSongsView(discs: self.albumSongsService.songs)
-//            DetailStatisticsView(count: self.albumSongsService.count, duration: self.albumSongsService.duration)
+            BannerCoverView(cover: self.playlistCoverService.image)
+                .listRowSeparator(.hidden)
+            JumboTitleView(title: self.playlist.name)
+                .listRowSeparator(.hidden)
+            PlayButtonsView(
+                songs: self.playlistSongsService.songs,
+                type: .playlist
+            )
+            StatisticsView(
+                count: self.playlistSongsService.count,
+                duration: self.playlistSongsService.duration
+            )
         }
         .listStyle(.inset)
         .navigationBarTitleDisplayMode(.inline)
