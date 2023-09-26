@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct MultiRowLabelStyle: LabelStyle {
+    var width: CGFloat?
+    
+    
     func makeBody(configuration: Configuration) -> some View {
         HStack(alignment: .center) {
             configuration.icon
-                .frame(width: 30, alignment: .center)
+                .frame(width: self.width ?? 30, alignment: .center)
             configuration.title
         }
     }

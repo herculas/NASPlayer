@@ -23,7 +23,7 @@ struct PlaylistDetailView: View {
     var body: some View {
         List {
             BannerCoverView(cover: self.playlistCoverService.image)
-                .listRowSeparator(.hidden)
+//                .listRowSeparator(.hidden)
             JumboTitleView(title: self.playlist.name)
                 .listRowSeparator(.hidden)
             PlayButtonsView(
@@ -35,6 +35,7 @@ struct PlaylistDetailView: View {
                 count: self.playlistSongsService.count,
                 duration: self.playlistSongsService.duration
             )
+            .listRowSeparator(.hidden, edges: .bottom)
         }
         .listStyle(.inset)
         .navigationBarTitleDisplayMode(.inline)

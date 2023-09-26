@@ -64,6 +64,8 @@
 		FCABF8662AB9823F00B7E5BA /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF8652AB9823F00B7E5BA /* AlbumDetailView.swift */; };
 		FCABF8682AB9828100B7E5BA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF8672AB9828100B7E5BA /* MainTabView.swift */; };
 		FCD088EA2AC1DE9800D21366 /* PlaylistSongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD088E92AC1DE9800D21366 /* PlaylistSongListView.swift */; };
+		FCEE7F1A2AC29E8B00505EF4 /* SongCoverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE7F192AC29E8B00505EF4 /* SongCoverService.swift */; };
+		FCEE7F1C2AC2A64700505EF4 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE7F1B2AC2A64700505EF4 /* WaveformView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,8 @@
 		FCABF8652AB9823F00B7E5BA /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
 		FCABF8672AB9828100B7E5BA /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		FCD088E92AC1DE9800D21366 /* PlaylistSongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSongListView.swift; sourceTree = "<group>"; };
+		FCEE7F192AC29E8B00505EF4 /* SongCoverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCoverService.swift; sourceTree = "<group>"; };
+		FCEE7F1B2AC2A64700505EF4 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 				FC76D1FF2ABC391B000A3A08 /* JumboTitleView.swift */,
 				FC76D2012ABC39D8000A3A08 /* PlayButtonsView.swift */,
 				FC76D2052ABC3C2E000A3A08 /* StatisticsView.swift */,
+				FCEE7F1B2AC2A64700505EF4 /* WaveformView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 		FC76D2122ABC7139000A3A08 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FCEE7F182AC29E8000505EF4 /* Song */,
 				FC76D2132ABC7150000A3A08 /* Album */,
 				FC76D21C2ABC7B72000A3A08 /* Playlist */,
 			);
@@ -439,6 +445,14 @@
 			path = Playlist;
 			sourceTree = "<group>";
 		};
+		FCEE7F182AC29E8000505EF4 /* Song */ = {
+			isa = PBXGroup;
+			children = (
+				FCEE7F192AC29E8B00505EF4 /* SongCoverService.swift */,
+			);
+			path = Song;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -526,6 +540,8 @@
 				en,
 				Base,
 				"zh-Hans",
+				ja,
+				"zh-Hant",
 			);
 			mainGroup = FCABF7E62AB97B0F00B7E5BA;
 			productRefGroup = FCABF7F02AB97B0F00B7E5BA /* Products */;
@@ -571,6 +587,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCEE7F1A2AC29E8B00505EF4 /* SongCoverService.swift in Sources */,
 				FCABF85E2AB981C800B7E5BA /* MeView.swift in Sources */,
 				FCABF84C2AB980C800B7E5BA /* Song.swift in Sources */,
 				FC0C99C92ABB131E00259897 /* Playlist.swift in Sources */,
@@ -582,6 +599,7 @@
 				FC76D2022ABC39D8000A3A08 /* PlayButtonsView.swift in Sources */,
 				FC76D2172ABC73D0000A3A08 /* AlbumSongsService.swift in Sources */,
 				FC9EDFD02AB9C09B00847101 /* MultiRowLabelStyle.swift in Sources */,
+				FCEE7F1C2AC2A64700505EF4 /* WaveformView.swift in Sources */,
 				FC76D2152ABC71D5000A3A08 /* SongRequest.swift in Sources */,
 				FC921E9B2ABD8FF200D711A4 /* CoverRequest.swift in Sources */,
 				FCABF84A2AB980B800B7E5BA /* Response.swift in Sources */,

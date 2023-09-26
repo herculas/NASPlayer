@@ -55,13 +55,13 @@ class CoverRequest {
     
     func songPublisher(id: String) -> AnyPublisher<UIImage, NetworkError> {
         let endpoint = CoverEndpoint.song(id: id)
-        let request = Request(endpoint: endpoint, timeout: 50000)
+        let request = Request(endpoint: endpoint, timeout: 200000)
         return self.requestable.issue(request: request)
     }
     
     func albumPublisher(title: String, artist: String) -> AnyPublisher<UIImage, NetworkError> {
         let endpoint = CoverEndpoint.album(title: title, artist: artist)
-        let request = Request(endpoint: endpoint, timeout: 50000)
+        let request = Request(endpoint: endpoint, timeout: 200000)
         return self.requestable.issue(request: request)
     }
 }

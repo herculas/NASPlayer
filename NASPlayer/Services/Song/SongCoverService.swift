@@ -1,14 +1,14 @@
 //
-//  AlbumCoverService.swift
+//  SongCoverService.swift
 //  NASPlayer
 //
-//  Created by 宋睿 on 22/9/2023.
+//  Created by 宋睿 on 26/9/2023.
 //
 
 import SwiftUI
 import Combine
 
-class AlbumCoverService: ObservableObject {
+class SongCoverService: ObservableObject {
     var coverRequest = CoverRequest()
     var cancellable: AnyCancellable?
     
@@ -17,13 +17,13 @@ class AlbumCoverService: ObservableObject {
     @Published var isLoading = true
     @Published var error: NetworkError?
     
-    init(album: AlbumVM) {
-        self.trigger(title: album.name, artist: album.albumArtist)
+    init(id: String) {
+        self.trigger(id: id)
     }
     
-    func trigger(title: String, artist: String) {
+    func trigger(id: String) {
         self.cancellable = self.coverRequest
-            .albumPublisher(title: title, artist: artist)
+            .songPublisher(id: id)
             .subscribe(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 switch completion {

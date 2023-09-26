@@ -20,14 +20,12 @@ struct StatisticsView: View {
                     .font(.system(size: 14))
                     .foregroundStyle(.secondary)
                     .padding(.bottom, 60)
-                    .listRowSeparator(.hidden)
                     
             } else {
                 Text("\(count) songs, \(duration / 3600) hours \((duration / 60) % 60) minutes")
                     .font(.system(size: 14))
                     .foregroundStyle(.secondary)
                     .padding(.bottom, 60)
-                    .listRowSeparator(.hidden)
             }
                 
         }

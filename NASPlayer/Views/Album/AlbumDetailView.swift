@@ -29,7 +29,7 @@ struct AlbumDetailView: View {
                 year: self.album.year,
                 songs: self.albumSongsService.songs
             )
-                .listRowSeparator(.hidden)
+            .listRowSeparator(.hidden)
             PlayButtonsView(
                 songs: self.albumSongsService.songs,
                 type: .album
@@ -39,6 +39,7 @@ struct AlbumDetailView: View {
                 count: self.albumSongsService.count,
                 duration: self.albumSongsService.duration
             )
+            .listRowSeparator(.hidden, edges: .bottom)
         }
         .listStyle(.inset)
         .navigationBarTitleDisplayMode(.inline)

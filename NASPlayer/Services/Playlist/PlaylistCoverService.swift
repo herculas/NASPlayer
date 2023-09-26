@@ -1,5 +1,5 @@
 //
-//  PlaylistCoverRequest.swift
+//  PlaylistCoverService.swift
 //  NASPlayer
 //
 //  Created by 宋睿 on 22/9/2023.

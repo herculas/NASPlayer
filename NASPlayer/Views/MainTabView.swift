@@ -51,7 +51,17 @@ struct MainTabView: View {
     MainTabView()
 }
 
-#Preview("Chinese") {
+#Preview("Simp CH") {
     MainTabView()
         .environment(\.locale, Locale(identifier: "zh_Hans_CN"))
+}
+
+#Preview("Trad CH") {
+    MainTabView()
+        .environment(\.locale, Locale(identifier: "zh_Hant"))
+}
+
+#Preview("Japanese") {
+    MainTabView()
+        .environment(\.locale, Locale(identifier: "JA"))
 }
