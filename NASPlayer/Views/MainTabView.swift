@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct MainTabView: View {
+    
+    @State private var playerExpanded = false
+    @Namespace private var animation
+    
     var body: some View {
         TabView {
             
@@ -42,26 +46,42 @@ struct MainTabView: View {
                 Image(systemName: "person.crop.circle.fill")
                 Text("Me")
             }
-            
+        }
+        .safeAreaInset(edge: .bottom) {
+            ReducedPlayerView(
+                playerExpanded: self.$playerExpanded,
+                animation: self.animation
+            )
+        }
+        .overlay {
+            if self.playerExpanded {
+                ExpandedPlayerView(
+                    playerExpanded: self.$playerExpanded,
+                    animation: self.animation
+                )
+                // transition with more fluent animation
+                .transition(.asymmetric(insertion: .identity, removal: .offset(y: -5)))
+            }
         }
     }
 }
 
-#Preview("Default") {
+#Preview("English") {
     MainTabView()
+        .environment(\.locale, Locale(identifier: "en"))
 }
 
-#Preview("Simp CH") {
+#Preview("Simplified Chinese") {
     MainTabView()
-        .environment(\.locale, Locale(identifier: "zh_Hans_CN"))
+        .environment(\.locale, Locale(identifier: "zh_Hans"))
 }
 
-#Preview("Trad CH") {
+#Preview("Traditional Chinese") {
     MainTabView()
         .environment(\.locale, Locale(identifier: "zh_Hant"))
 }
 
 #Preview("Japanese") {
     MainTabView()
-        .environment(\.locale, Locale(identifier: "JA"))
+        .environment(\.locale, Locale(identifier: "ja"))
 }

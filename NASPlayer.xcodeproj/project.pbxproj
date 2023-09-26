@@ -66,6 +66,10 @@
 		FCD088EA2AC1DE9800D21366 /* PlaylistSongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD088E92AC1DE9800D21366 /* PlaylistSongListView.swift */; };
 		FCEE7F1A2AC29E8B00505EF4 /* SongCoverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE7F192AC29E8B00505EF4 /* SongCoverService.swift */; };
 		FCEE7F1C2AC2A64700505EF4 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE7F1B2AC2A64700505EF4 /* WaveformView.swift */; };
+		FCEE7F1E2AC2B5A800505EF4 /* UITabBarController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE7F1D2AC2B5A800505EF4 /* UITabBarController+.swift */; };
+		FCEE7F222AC2F67800505EF4 /* ExpandedPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE7F212AC2F67800505EF4 /* ExpandedPlayerView.swift */; };
+		FCEE7F242AC2F68800505EF4 /* ReducedPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE7F232AC2F68800505EF4 /* ReducedPlayerView.swift */; };
+		FCEE7F262AC309CD00505EF4 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE7F252AC309CD00505EF4 /* View+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +153,10 @@
 		FCD088E92AC1DE9800D21366 /* PlaylistSongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSongListView.swift; sourceTree = "<group>"; };
 		FCEE7F192AC29E8B00505EF4 /* SongCoverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCoverService.swift; sourceTree = "<group>"; };
 		FCEE7F1B2AC2A64700505EF4 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
+		FCEE7F1D2AC2B5A800505EF4 /* UITabBarController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+.swift"; sourceTree = "<group>"; };
+		FCEE7F212AC2F67800505EF4 /* ExpandedPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedPlayerView.swift; sourceTree = "<group>"; };
+		FCEE7F232AC2F68800505EF4 /* ReducedPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducedPlayerView.swift; sourceTree = "<group>"; };
+		FCEE7F252AC309CD00505EF4 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +192,8 @@
 				FC76D2012ABC39D8000A3A08 /* PlayButtonsView.swift */,
 				FC76D2052ABC3C2E000A3A08 /* StatisticsView.swift */,
 				FCEE7F1B2AC2A64700505EF4 /* WaveformView.swift */,
+				FCEE7F232AC2F68800505EF4 /* ReducedPlayerView.swift */,
+				FCEE7F212AC2F67800505EF4 /* ExpandedPlayerView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -353,6 +363,8 @@
 				FCABF8302AB97EEB00B7E5BA /* CharacterSet+.swift */,
 				FCABF8322AB97F0700B7E5BA /* Color+.swift */,
 				FCABF8342AB97F2600B7E5BA /* Dictionary+.swift */,
+				FCEE7F1D2AC2B5A800505EF4 /* UITabBarController+.swift */,
+				FCEE7F252AC309CD00505EF4 /* View+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -621,6 +633,7 @@
 				FC76D20B2ABC56D3000A3A08 /* Request.swift in Sources */,
 				FC0C99C72ABB130E00259897 /* PlaylistVM.swift in Sources */,
 				FCABF8352AB97F2600B7E5BA /* Dictionary+.swift in Sources */,
+				FCEE7F222AC2F67800505EF4 /* ExpandedPlayerView.swift in Sources */,
 				FC76D20D2ABC5BBB000A3A08 /* Requestable.swift in Sources */,
 				FCABF8232AB97C5200B7E5BA /* Device.swift in Sources */,
 				FC0C99CF2ABB225600259897 /* PlaylistDetailView.swift in Sources */,
@@ -630,10 +643,13 @@
 				FCABF85C2AB981B000B7E5BA /* BrowseView.swift in Sources */,
 				FCABF7F52AB97B0F00B7E5BA /* ContentView.swift in Sources */,
 				FC76D2042ABC3B01000A3A08 /* AlbumSongListView.swift in Sources */,
+				FCEE7F262AC309CD00505EF4 /* View+.swift in Sources */,
+				FCEE7F242AC2F68800505EF4 /* ReducedPlayerView.swift in Sources */,
 				FC76D2062ABC3C2E000A3A08 /* StatisticsView.swift in Sources */,
 				FC76D2092ABC55A4000A3A08 /* Endpoint.swift in Sources */,
 				FCABF8332AB97F0700B7E5BA /* Color+.swift in Sources */,
 				FCABF8312AB97EEB00B7E5BA /* CharacterSet+.swift in Sources */,
+				FCEE7F1E2AC2B5A800505EF4 /* UITabBarController+.swift in Sources */,
 				FC76D2112ABC631B000A3A08 /* AlbumRequest.swift in Sources */,
 				FCABF7F32AB97B0F00B7E5BA /* NASPlayerApp.swift in Sources */,
 				FCABF8642AB9822A00B7E5BA /* AlbumListView.swift in Sources */,

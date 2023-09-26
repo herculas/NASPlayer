@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MeView: View {
     var body: some View {
-        Text("Me View")
+        Image(systemName: "person.crop.circle.fill")
     }
 }
 
