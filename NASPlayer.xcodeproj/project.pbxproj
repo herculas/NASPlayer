@@ -48,7 +48,6 @@
 		FCABF8312AB97EEB00B7E5BA /* CharacterSet+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF8302AB97EEB00B7E5BA /* CharacterSet+.swift */; };
 		FCABF8332AB97F0700B7E5BA /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF8322AB97F0700B7E5BA /* Color+.swift */; };
 		FCABF8352AB97F2600B7E5BA /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF8342AB97F2600B7E5BA /* Dictionary+.swift */; };
-		FCABF8372AB97F3E00B7E5BA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF8362AB97F3E00B7E5BA /* Data.swift */; };
 		FCABF8392AB97F5300B7E5BA /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF8382AB97F5300B7E5BA /* Genre.swift */; };
 		FCABF83D2AB97F6E00B7E5BA /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF83C2AB97F6E00B7E5BA /* Time.swift */; };
 		FCABF8482AB980A700B7E5BA /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF8472AB980A700B7E5BA /* Album.swift */; };
@@ -64,6 +63,7 @@
 		FCABF8642AB9822A00B7E5BA /* AlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF8632AB9822A00B7E5BA /* AlbumListView.swift */; };
 		FCABF8662AB9823F00B7E5BA /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF8652AB9823F00B7E5BA /* AlbumDetailView.swift */; };
 		FCABF8682AB9828100B7E5BA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF8672AB9828100B7E5BA /* MainTabView.swift */; };
+		FCD088EA2AC1DE9800D21366 /* PlaylistSongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD088E92AC1DE9800D21366 /* PlaylistSongListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,7 +128,6 @@
 		FCABF8302AB97EEB00B7E5BA /* CharacterSet+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+.swift"; sourceTree = "<group>"; };
 		FCABF8322AB97F0700B7E5BA /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		FCABF8342AB97F2600B7E5BA /* Dictionary+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
-		FCABF8362AB97F3E00B7E5BA /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		FCABF8382AB97F5300B7E5BA /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		FCABF83C2AB97F6E00B7E5BA /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		FCABF8422AB9800E00B7E5BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -145,6 +144,7 @@
 		FCABF8632AB9822A00B7E5BA /* AlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListView.swift; sourceTree = "<group>"; };
 		FCABF8652AB9823F00B7E5BA /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
 		FCABF8672AB9828100B7E5BA /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		FCD088E92AC1DE9800D21366 /* PlaylistSongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSongListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,7 +354,6 @@
 		FCABF8202AB97C2000B7E5BA /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
-				FCABF8362AB97F3E00B7E5BA /* Data.swift */,
 				FCABF8382AB97F5300B7E5BA /* Genre.swift */,
 				FCABF83C2AB97F6E00B7E5BA /* Time.swift */,
 			);
@@ -435,6 +434,7 @@
 				FC0C99CA2ABB1CEF00259897 /* PlaylistEntryView.swift */,
 				FCABF85F2AB981DD00B7E5BA /* PlaylistsView.swift */,
 				FC0C99CE2ABB225500259897 /* PlaylistDetailView.swift */,
+				FCD088E92AC1DE9800D21366 /* PlaylistSongListView.swift */,
 			);
 			path = Playlist;
 			sourceTree = "<group>";
@@ -608,7 +608,7 @@
 				FC0C99CF2ABB225600259897 /* PlaylistDetailView.swift in Sources */,
 				FC76D2002ABC391B000A3A08 /* JumboTitleView.swift in Sources */,
 				FCABF8272AB97D2A00B7E5BA /* Device+CustomString.swift in Sources */,
-				FCABF8372AB97F3E00B7E5BA /* Data.swift in Sources */,
+				FCD088EA2AC1DE9800D21366 /* PlaylistSongListView.swift in Sources */,
 				FCABF85C2AB981B000B7E5BA /* BrowseView.swift in Sources */,
 				FCABF7F52AB97B0F00B7E5BA /* ContentView.swift in Sources */,
 				FC76D2042ABC3B01000A3A08 /* AlbumSongListView.swift in Sources */,

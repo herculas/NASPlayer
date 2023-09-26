@@ -8,7 +8,6 @@
 struct SongVM: Identifiable {
     var id: String
     
-        // basic info
     var title: String
     var album: String
     var artist: String
@@ -18,7 +17,6 @@ struct SongVM: Identifiable {
     var track: Int
     var year: Int
     
-        // audio params
     var bitrate: Int
     var channel: Int
     var duration: Int
@@ -27,7 +25,6 @@ struct SongVM: Identifiable {
     var container: String
     var size: Int
     
-        // song rating
     var rating: Int
 }
 

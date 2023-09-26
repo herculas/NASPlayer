@@ -31,8 +31,6 @@ struct JumboTitleView: View {
                         .padding(.bottom, -1)
                         .multilineTextAlignment(.center)
                         .lineLimit(2)
-                } else {
-                    Text("dasdfafsadgws")
                 }
                 
                 if let songs = self.songs {

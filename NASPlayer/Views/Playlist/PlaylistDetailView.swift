@@ -30,6 +30,7 @@ struct PlaylistDetailView: View {
                 songs: self.playlistSongsService.songs,
                 type: .playlist
             )
+            PlaylistSongListView(songs: self.playlistSongsService.songs)
             StatisticsView(
                 count: self.playlistSongsService.count,
                 duration: self.playlistSongsService.duration

@@ -15,16 +15,13 @@ struct BannerCoverView: View {
         HStack {
             Spacer()
             if let cover = cover {
-                VStack {
-                    Image(uiImage: cover)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .clipShape(.rect(cornerRadius: 12))
-                        .frame(maxWidth: 280, maxHeight: 280)
-                        .shadow(radius: 5)
-                        .padding(.bottom, 5)
-                }
-                .frame(height: 280)
+                Image(uiImage: cover)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(.rect(cornerRadius: 12))
+                    .frame(maxWidth: 280, maxHeight: 280)
+                    .shadow(radius: 5)
+                    .padding(.bottom, 5)
             } else {
                 ProgressView()
                     .frame(width: 280, height: 280)

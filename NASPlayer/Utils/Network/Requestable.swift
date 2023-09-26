@@ -9,9 +9,17 @@ import Combine
 import UIKit
 
 protocol Requestable {
+    /// Default timeout for requests.
     var reqTimeout: Float { get }
+    
+    /// Default timeout for responses.
     var resTimeout: Float { get }
+    
+    /// Issues requests for simple JSON files.
     func issue<T: Codable>(request req: Request) -> AnyPublisher<T, NetworkError>
+    
+    /// Issues requests for images.
+    func issue(request req: Request) -> AnyPublisher<UIImage, NetworkError>
 }
 
 class NetworkRequestable: NSObject, Requestable {
