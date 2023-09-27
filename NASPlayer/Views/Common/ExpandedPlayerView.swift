@@ -16,24 +16,25 @@ struct ExpandedPlayerView: View {
     var animation: Namespace.ID
     
     var body: some View {
-        GeometryReader {
-            let size = $0.size
-            let safeArea = $0.safeAreaInsets
-            
-            ZStack {
+        if self.playerExpanded {
+            GeometryReader {
+                let size = $0.size
+                let safeArea = $0.safeAreaInsets
                 
-                RoundedRectangle(
-                    cornerRadius: self.animatedContent ? self.deviceCornerRadius : 0,
-                    style: .continuous
-                )
+                ZStack {
+                    // MARK: - background
+                    RoundedRectangle(
+                        cornerRadius: self.animatedContent ? self.deviceCornerRadius : 0,
+                        style: .continuous
+                    )
                     .fill(.thinMaterial)
                     .overlay {
                         RoundedRectangle(
                             cornerRadius: self.animatedContent ? self.deviceCornerRadius : 0,
                             style: .continuous
                         )
-                            .fill(Color.lightGray)
-                            .opacity(self.animatedContent ? 1 : 0)
+                        .fill(Color.lightGray)
+                        .opacity(self.animatedContent ? 1 : 0)
                     }
                     .overlay(alignment: .top) {
                         ReducedContentView(
@@ -44,65 +45,69 @@ struct ExpandedPlayerView: View {
                         .opacity(self.animatedContent ? 0 : 1)
                     }
                     .matchedGeometryEffect(id: "BGVIEW", in: self.animation)
-                
-                VStack(spacing: 15) {
-                    // Grab indicator
-                    Capsule()
-                        .fill(.secondary)
-                        .frame(width: 40, height: 5)
-                        .opacity(self.animatedContent ? 1 : 0)
-                        .offset(y: self.animatedContent ? 0 : size.height)
                     
-                    // cover hero view
-                    if self.animatedContent {
-                        GeometryReader {
-                            let size = $0.size
-                            Image("cover")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: size.width, height: size.height)
-                                .clipShape(RoundedRectangle(cornerRadius: self.animatedContent ? 15 : 5, style: .continuous))
-                        }
-                        .matchedGeometryEffect(id: "ARTWORK", in: self.animation)
-                        .frame(height: size.width - 50)
-                        .padding(.vertical, size.height < 700 ? 10 : 30)
-                    }
-                    
-                    // player view
-                    PlayerView(size)
-                        .offset(y: self.animatedContent ? 0 : size.height)
-                }
-                .padding(.top, safeArea.top + (safeArea.bottom == 0 ? 10 : 0))
-                .padding(.bottom, safeArea.bottom == 0 ? 10 : safeArea.bottom)
-                .padding(.horizontal, 25)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                .clipped()
-            }
-            .contentShape(Rectangle())
-            .offset(y: self.offset)
-            .gesture(
-                DragGesture()
-                    .onChanged({ value in
-                        let translation = value.translation.height
-                        self.offset = translation > 0 ? translation : 0
-                    }).onEnded({ value in
-                        withAnimation(.easeInOut(duration: 0.3)) {
-                            if self.offset > size.height * 0.4 {
-                                self.playerExpanded = false
-                                self.animatedContent = false
-                            } else {
-                                self.offset = .zero
+                    // MARK: - contents
+                    VStack(spacing: 15) {
+                        
+                        // drag indicator
+                        Capsule()
+                            .fill(.secondary)
+                            .frame(width: 40, height: 5)
+                            .opacity(self.animatedContent ? 1 : 0)
+                            .offset(y: self.animatedContent ? 0 : size.height)
+                        
+                        // cover
+                        if self.animatedContent {
+                            GeometryReader {
+                                let size = $0.size
+                                Image("cover")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: size.width, height: size.height)
+                                    .clipShape(RoundedRectangle(cornerRadius: self.animatedContent ? 15 : 5, style: .continuous))
                             }
+                            .matchedGeometryEffect(id: "ARTWORK", in: self.animation)
+                            .frame(height: size.width - 50)
+                            .padding(.vertical, size.height < 700 ? 10 : 30)
                         }
-                    })
-            )
-            .ignoresSafeArea(.container, edges: .all)
-        }
-        
-        .onAppear {
-            withAnimation(.easeInOut(duration: 0.35)) {
-                self.animatedContent = true
+                        
+                        // control panel
+                        PlayerView(size)
+                            .offset(y: self.animatedContent ? 0 : size.height)
+                    }
+                    .padding(.top, safeArea.top + (safeArea.bottom == 0 ? 10 : 0))
+                    .padding(.bottom, safeArea.bottom == 0 ? 10 : safeArea.bottom)
+                    .padding(.horizontal, 25)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                    .clipped()
+                }
+                .contentShape(Rectangle())
+                .offset(y: self.offset)
+                .gesture(
+                    DragGesture()
+                        .onChanged({ value in
+                            let translation = value.translation.height
+                            self.offset = translation > 0 ? translation : 0
+                        }).onEnded({ value in
+                            withAnimation(.easeInOut(duration: 0.3)) {
+                                if self.offset > size.height * 0.4 {
+                                    self.playerExpanded = false
+                                    self.animatedContent = false
+                                } else {
+                                    self.offset = .zero
+                                }
+                            }
+                        })
+                )
+                .ignoresSafeArea(.container, edges: .all)
             }
+            .onAppear {
+                withAnimation(.easeInOut(duration: 0.35)) {
+                    self.offset = 0
+                    self.animatedContent = true
+                }
+            }
+            
         }
     }
     
@@ -239,4 +244,3 @@ struct ExpandedPlayerView: View {
 #Preview {
     MainTabView()
 }
- 

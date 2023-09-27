@@ -44,6 +44,7 @@ class NetworkRequestable: NSObject, Requestable {
             .mapError { error in
                 NetworkError.invalidJson(String(describing: error))
             }
+            .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
     

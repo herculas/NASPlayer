@@ -54,14 +54,15 @@ struct MainTabView: View {
             )
         }
         .overlay {
-            if self.playerExpanded {
-                ExpandedPlayerView(
-                    playerExpanded: self.$playerExpanded,
-                    animation: self.animation
+            ExpandedPlayerView(
+                playerExpanded: self.$playerExpanded,
+                animation: self.animation
+            ).transition(
+                .asymmetric(
+                    insertion: .identity,
+                    removal: .offset(y: -5)
                 )
-                // transition with more fluent animation
-                .transition(.asymmetric(insertion: .identity, removal: .offset(y: -5)))
-            }
+            )
         }
     }
 }

@@ -83,7 +83,6 @@ struct ReducedContentView: View {
         .frame(height: 50)
         .contentShape(Rectangle())
         .onTapGesture {
-                // expand the mini player
             withAnimation(.easeInOut(duration: 0.3)) {
                 self.playerExpanded = true
             }
