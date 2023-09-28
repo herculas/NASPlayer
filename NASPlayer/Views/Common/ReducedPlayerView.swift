@@ -29,9 +29,8 @@ struct ReducedPlayerView: View {
                     .matchedGeometryEffect(id: "BGVIEW", in: self.animation)
             }
         }
-        .frame(width: 410, height: 50)
-        .clipShape(.rect(cornerRadius: 8))
-        .offset(y: -48)
+        .frame(height: 60)
+        .offset(y: -49)
     }
 }
 
@@ -49,7 +48,12 @@ struct ReducedContentView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: size.width, height: size.height)
-                            .clipShape(RoundedRectangle(cornerRadius: self.playerExpanded ? 15 : 5, style: .continuous))
+                            .clipShape(
+                                RoundedRectangle(
+                                    cornerRadius: self.playerExpanded ? 15 : 5,
+                                    style: .continuous
+                                )
+                            )
                     }
                     .matchedGeometryEffect(id: "ARTWORK", in: self.animation)
                 }

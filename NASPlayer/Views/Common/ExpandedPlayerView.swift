@@ -10,6 +10,7 @@ import SwiftUI
 struct ExpandedPlayerView: View {
     
     @State private var animatedContent = false
+    @State private var dragIndicator = false
     @State private var offset: CGFloat = 0
     
     @Binding var playerExpanded: Bool
@@ -53,7 +54,7 @@ struct ExpandedPlayerView: View {
                         Capsule()
                             .fill(.secondary)
                             .frame(width: 40, height: 5)
-                            .opacity(self.animatedContent ? 1 : 0)
+                            .opacity(self.dragIndicator ? 1 : 0)
                             .offset(y: self.animatedContent ? 0 : size.height)
                         
                         // cover
@@ -64,7 +65,12 @@ struct ExpandedPlayerView: View {
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: size.width, height: size.height)
-                                    .clipShape(RoundedRectangle(cornerRadius: self.animatedContent ? 15 : 5, style: .continuous))
+                                    .clipShape(
+                                        RoundedRectangle(
+                                            cornerRadius: self.animatedContent ? 15 : 5,
+                                            style: .continuous
+                                        )
+                                    )
                             }
                             .matchedGeometryEffect(id: "ARTWORK", in: self.animation)
                             .frame(height: size.width - 50)
@@ -89,11 +95,15 @@ struct ExpandedPlayerView: View {
                             let translation = value.translation.height
                             self.offset = translation > 0 ? translation : 0
                         }).onEnded({ value in
-                            withAnimation(.easeInOut(duration: 0.3)) {
-                                if self.offset > size.height * 0.4 {
+                            if self.offset > size.height * 0.47 {
+                                self.dragIndicator = false
+                                withAnimation(.easeInOut(duration: 0.3)) {
                                     self.playerExpanded = false
                                     self.animatedContent = false
-                                } else {
+                                    self.offset = size.height
+                                }
+                            } else {
+                                withAnimation(.easeInOut(duration: 0.3)) {
                                     self.offset = .zero
                                 }
                             }
@@ -105,6 +115,7 @@ struct ExpandedPlayerView: View {
                 withAnimation(.easeInOut(duration: 0.35)) {
                     self.offset = 0
                     self.animatedContent = true
+                    self.dragIndicator = true
                 }
             }
             
