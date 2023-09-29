@@ -18,10 +18,11 @@ struct JumboTitleView: View {
             Spacer()
             VStack {
                 Text(title)
-                    .multilineTextAlignment(.center)
                     .font(.title3)
                     .fontWeight(.semibold)
                     .padding(.bottom, -3.0)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
                 
                 if let artist = self.artist {
                     Text(artist)
@@ -44,6 +45,7 @@ struct JumboTitleView: View {
                     }
                     .font(.caption2)
                     .foregroundStyle(.secondary)
+                    .lineLimit(1)
                 }
             }
             Spacer()

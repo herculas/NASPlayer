@@ -30,3 +30,7 @@ struct BannerCoverView: View {
         }
     }
 }
+
+#Preview {
+    AlbumDetailView(album: AlbumVM.mock)
+}

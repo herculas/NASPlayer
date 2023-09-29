@@ -17,41 +17,67 @@ struct PlayButtonsView: View {
     var songs: [SongVM]?
     var type: ListType
     
-    var body: some View {
-        if let songs = songs {
-            HStack(alignment: .center, spacing: 25) {
-                Button(action: {
-                    
-                }, label: {
-                    Label("Play", systemImage: "play.fill")
-                        .font(.system(size: 16))
-                        .fontWeight(.semibold)
-                        .labelStyle(.titleAndIcon)
-                })
-                .frame(width: 180, height: 45)
-                .foregroundStyle(.accent)
-                .background(.quaternary)
-                .clipShape(.rect(cornerRadius: 10))
-                
-                Button(action: {
-                    
-                }, label: {
-                    Label("Shuffle", systemImage: "shuffle")
-                        .font(.system(size: 16))
-                        .fontWeight(.semibold)
-                        .labelStyle(.titleAndIcon)
-                })
-                .frame(width: 180, height: 45)
-                .foregroundStyle(.accent)
-                .background(.quaternary)
-                .clipShape(.rect(cornerRadius: 10))
-            }
-            .listRowSeparator(.hidden)
-            .padding(
-                .bottom,
-                (Dictionary(grouping: songs, by: { $0.disc }).count > 1 && self.type == .album) ? 0 : 24
-            )
+    @Environment(\.colorScheme) var colorScheme
+    
+    private var buttonBackground: Color {
+        if self.colorScheme == .dark {
+            return .lightGray
+        } else {
+            return .paleGray
         }
+    }
+    
+    private var bottomPadding: CGFloat {
+        if let songs = self.songs {
+            return (Dictionary(grouping: songs, by: { $0.disc }).count > 1) && (self.type == .album) ? 0 : 24
+        } else {
+            return 0
+        }
+    }
+    
+    private var buttonWidth: CGFloat {
+        return 180
+    }
+    
+    var body: some View {
+        HStack(alignment: .center, spacing: 25) {
+            PlayButtonView()
+            ShuffleButtonView()
+        }
+        .listRowSeparator(.hidden)
+        .padding(.bottom, self.bottomPadding)
+    }
+    
+    @ViewBuilder
+    func PlayButtonView() -> some View {
+        Button{
+            
+        } label: {
+            Label("Play", systemImage: "play.fill")
+                .font(.callout)
+                .fontWeight(.semibold)
+                .labelStyle(.titleAndIcon)
+        }
+        .foregroundStyle(.accent)
+        .frame(width: self.buttonWidth, height: 45)
+        .background(self.buttonBackground)
+        .clipShape(.rect(cornerRadius: 10))
+    }
+    
+    @ViewBuilder
+    func ShuffleButtonView() -> some View {
+        Button(action: {
+            
+        }, label: {
+            Label("Shuffle", systemImage: "shuffle")
+                .font(.callout)
+                .fontWeight(.semibold)
+                .labelStyle(.titleAndIcon)
+        })
+        .foregroundStyle(.accent)
+        .frame(width: self.buttonWidth, height: 45)
+        .background(self.buttonBackground)
+        .clipShape(.rect(cornerRadius: 10))
     }
 }
 
