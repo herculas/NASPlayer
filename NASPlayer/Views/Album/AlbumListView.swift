@@ -19,7 +19,8 @@ struct AlbumListView: View {
                         NavigationLink {
                             AlbumDetailView(album: album)
                         } label: {
-                            AlbumCardView(album: album).padding(.vertical, 10)
+                            AlbumCardView(album: album)
+                                .padding(.vertical, 10)
                         }
                     }
                 }

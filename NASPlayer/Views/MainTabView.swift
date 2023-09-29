@@ -47,23 +47,23 @@ struct MainTabView: View {
                 Text("Me")
             }
         }
-        .safeAreaInset(edge: .bottom) {
-            ReducedPlayerView(
-                playerExpanded: self.$playerExpanded,
-                animation: self.animation
-            )
-        }
-        .overlay {
-            ExpandedPlayerView(
-                playerExpanded: self.$playerExpanded,
-                animation: self.animation
-            ).transition(
-                .asymmetric(
-                    insertion: .identity,
-                    removal: .offset(y: -5)
-                )
-            )
-        }
+//        .safeAreaInset(edge: .bottom) {
+//            ReducedPlayerView(
+//                playerExpanded: self.$playerExpanded,
+//                animation: self.animation
+//            )
+//        }
+//        .overlay {
+//            ExpandedPlayerView(
+//                playerExpanded: self.$playerExpanded,
+//                animation: self.animation
+//            ).transition(
+//                .asymmetric(
+//                    insertion: .identity,
+//                    removal: .offset(y: -5)
+//                )
+//            )
+//        }
     }
 }
 

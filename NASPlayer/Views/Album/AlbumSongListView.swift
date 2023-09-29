@@ -48,11 +48,11 @@ struct AlbumDiscView: View {
                         HStack(alignment: .center) {
                             VStack(alignment: .leading, spacing: 2) {
                                 Text(song.title)
-                                    .font(.system(size: 15))
+                                    .font(.callout)
                                     .frame(width: 300, alignment: .leading)
                                     .lineLimit(1)
                                 Text(song.artist)
-                                    .font(.system(size: 12))
+                                    .font(.caption)
                                     .foregroundStyle(.secondary)
                                     .frame(width: 300, alignment: .leading)
                                     .lineLimit(1)
@@ -63,7 +63,7 @@ struct AlbumDiscView: View {
                         }
                     }, icon: {
                         Text("\(song.track)")
-                            .font(.system(size: 15))
+                            .font(.callout)
                             .foregroundStyle(.secondary)
                     }
                 )
@@ -79,4 +79,8 @@ struct AlbumDiscView: View {
             }
         }
     }
+}
+
+#Preview {
+    AlbumDetailView(album: AlbumVM.mock)
 }

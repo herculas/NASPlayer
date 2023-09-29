@@ -19,16 +19,16 @@ struct JumboTitleView: View {
             VStack {
                 Text(title)
                     .multilineTextAlignment(.center)
-                    .font(.system(size: 20))
+                    .font(.title3)
                     .fontWeight(.semibold)
-                    .padding(.bottom, -2)
+                    .padding(.bottom, -3.0)
                 
                 if let artist = self.artist {
                     Text(artist)
-                        .font(.system(size: 16))
+                        .font(.headline)
                         .fontWeight(.regular)
                         .foregroundStyle(.accent)
-                        .padding(.bottom, -1)
+                        .padding(.bottom, -1.0)
                         .multilineTextAlignment(.center)
                         .lineLimit(2)
                 }
@@ -42,11 +42,15 @@ struct JumboTitleView: View {
                             Text(String(year))
                         }
                     }
-                    .font(.system(size: 10))
+                    .font(.caption2)
                     .foregroundStyle(.secondary)
                 }
             }
             Spacer()
         }
     }
+}
+
+#Preview {
+    AlbumDetailView(album: AlbumVM.mock)
 }

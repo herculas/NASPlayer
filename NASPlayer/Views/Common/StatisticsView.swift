@@ -17,17 +17,21 @@ struct StatisticsView: View {
            let duration = self.duration {
             if duration / 3600 == 0 {
                 Text("\(count) songs, \((duration / 60) % 60) minutes")
-                    .font(.system(size: 14))
+                    .font(.footnote)
                     .foregroundStyle(.secondary)
                     .padding(.bottom, 60)
                     
             } else {
                 Text("\(count) songs, \(duration / 3600) hours \((duration / 60) % 60) minutes")
-                    .font(.system(size: 14))
+                    .font(.footnote)
                     .foregroundStyle(.secondary)
                     .padding(.bottom, 60)
             }
                 
         }
     }
+}
+
+#Preview {
+    AlbumDetailView(album: AlbumVM.mock)
 }

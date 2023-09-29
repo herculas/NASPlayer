@@ -32,15 +32,14 @@ struct AlbumCardView: View {
             }
             
             Text(album.name)
-                .font(.system(size: 14))
+                .font(.callout)
                 .fontWeight(.medium)
                 .lineLimit(1)
                 .frame(maxWidth: 175, alignment: .leading)
             
             Text(album.albumArtist)
-                .font(.system(size: 12))
-                .fontWeight(.regular)
-                .foregroundStyle(Color.gray)
+                .font(.caption)
+                .foregroundStyle(.gray)
                 .lineLimit(1)
                 .frame(maxWidth: 175, alignment: .leading)
         }

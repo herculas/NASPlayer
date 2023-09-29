@@ -19,9 +19,7 @@ struct PlayButtonsView: View {
     
     var body: some View {
         if let songs = songs {
-            HStack(alignment: .center, spacing: 20) {
-                Spacer()
-
+            HStack(alignment: .center, spacing: 25) {
                 Button(action: {
                     
                 }, label: {
@@ -31,8 +29,8 @@ struct PlayButtonsView: View {
                         .labelStyle(.titleAndIcon)
                 })
                 .frame(width: 180, height: 45)
-                .background(Color.paleGray)
                 .foregroundStyle(.accent)
+                .background(.quaternary)
                 .clipShape(.rect(cornerRadius: 10))
                 
                 Button(action: {
@@ -44,11 +42,9 @@ struct PlayButtonsView: View {
                         .labelStyle(.titleAndIcon)
                 })
                 .frame(width: 180, height: 45)
-                .background(Color.paleGray)
                 .foregroundStyle(.accent)
+                .background(.quaternary)
                 .clipShape(.rect(cornerRadius: 10))
-                
-                Spacer()
             }
             .listRowSeparator(.hidden)
             .padding(
@@ -59,23 +55,6 @@ struct PlayButtonsView: View {
     }
 }
 
-struct PlayButtonView: View {
-    var name: String
-    var icon: String
-    var songs: [SongVM]
-    
-    var body: some View {
-        Button(action: {
-            
-        }) {
-            Label(name, systemImage: icon)
-                .font(.system(size: 16))
-                .fontWeight(.semibold)
-                .labelStyle(.titleAndIcon)
-        }
-        .frame(width: 180, height: 45)
-        .background(Color.paleGray)
-        .foregroundStyle(Color.accentColor)
-        .clipShape(.rect(cornerRadius: 10))
-    }
+#Preview {
+    AlbumDetailView(album: AlbumVM.mock)
 }

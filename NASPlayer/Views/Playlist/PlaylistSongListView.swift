@@ -42,11 +42,11 @@ struct PlaylistSongView: View {
                 HStack(alignment: .center) {
                     VStack(alignment: .leading, spacing: 2){
                         Text(self.song.title)
-                            .font(.system(size: 15))
+                            .font(.callout)
                             .frame(width: 300, alignment: .leading)
                             .lineLimit(1)
                         Text(self.song.artist)
-                            .font(.system(size: 12))
+                            .font(.caption)
                             .foregroundStyle(.secondary)
                             .frame(width: 300, alignment: .leading)
                             .lineLimit(1)

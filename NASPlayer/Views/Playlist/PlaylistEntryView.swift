@@ -32,9 +32,9 @@ struct PlaylistEntryView: View {
             }
             
             Text(self.playlist.name)
-                .font(.headline)
-                .fontWeight(.medium)
-                .frame(maxWidth: 200, alignment: .leading)
+                .font(.title3)
+                .fontWeight(.semibold)
+                .frame(maxWidth: 250, alignment: .leading)
                 .lineLimit(2)
                 .multilineTextAlignment(.leading)
         }
