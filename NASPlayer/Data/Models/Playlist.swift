@@ -7,14 +7,15 @@
 
 import Foundation
 
+// MARK: - Playlist List
 struct Playlists: Codable {
     let playlists: [Playlist]?
     let offset: Int?
     let total: Int?
 }
 
+// MARK: - Playlist
 struct Playlist: Codable, Identifiable {
-    
     let id: String
     let name: String?
     let type: String?
@@ -34,6 +35,7 @@ struct Playlist: Codable, Identifiable {
     }
 }
 
+// MARK: - Playlist Additional Parameters
 struct PlaylistAdditional: Codable {
     let songs: [Song]?
     let sharingInfo: PlaylistSharingInfo?
@@ -48,6 +50,7 @@ struct PlaylistAdditional: Codable {
     }
 }
 
+// MARK: - Playlist Sharing Information
 struct PlaylistSharingInfo: Codable {
     let id: String
     let url: String?

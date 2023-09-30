@@ -9,12 +9,11 @@ import SwiftUI
 import Combine
 
 class PlaylistCoverService: ObservableObject {
+    private var cancellable: AnyCancellable?
     var playlistRequest = PlaylistRequest()
     var coverRequest = CoverRequest()
-    var cancellable: AnyCancellable?
     
     @Published var image: UIImage?
-    
     @Published var isLoading = true
     @Published var error: NetworkError?
     

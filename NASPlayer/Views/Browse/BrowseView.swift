@@ -9,7 +9,14 @@ import SwiftUI
 
 struct BrowseView: View {
     var body: some View {
-        Image(systemName: "viewfinder.circle")
+        ScrollView(.vertical, showsIndicators: false) {
+            AlbumSlideView().padding(.vertical)
+            ArtistSlideView().padding(.vertical)
+            ComposerSlideView().padding(.vertical)
+            GenreSlideView().padding(.vertical)
+        }
+        .navigationTitle("Browse")
+        .padding(.horizontal)
     }
 }
 

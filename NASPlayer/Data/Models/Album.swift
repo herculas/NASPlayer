@@ -7,12 +7,14 @@
 
 import Foundation
 
+// MARK: - Album List
 struct Albums: Codable {
     let albums: [Album]?
     let offset: Int?
     let total: Int?
 }
 
+// MARK: - Album
 struct Album: Codable, Identifiable {
     let id = UUID()
     let name: String

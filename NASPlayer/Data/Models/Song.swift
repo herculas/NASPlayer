@@ -5,12 +5,14 @@
 //  Created by 宋睿 on 19/9/2023.
 //
 
+// MARK: - Song List
 struct Songs: Codable {
     let songs: [Song]?
     let offset: Int?
     let total: Int?
 }
 
+// MARK: - Song
 struct Song: Codable, Identifiable {
     let id: String
     let path: String?
@@ -19,6 +21,7 @@ struct Song: Codable, Identifiable {
     let additional: SongAdditional?
 }
 
+// MARK: - Song Additional
 struct SongAdditional: Codable {
     let songAudio: SongAudio?
     let songRating: SongRating?
@@ -31,6 +34,7 @@ struct SongAdditional: Codable {
     }
 }
 
+// MARK: - Song Audio Parameters
 struct SongAudio: Codable {
     let bitrate: Int?
     let channel: Int?
@@ -41,10 +45,12 @@ struct SongAudio: Codable {
     let container: String?
 }
 
+// MARK: - Song Rating
 struct SongRating: Codable {
     let rating: Int?
 }
 
+// MARK: - Song Metadata Tags
 struct SongTag: Codable {
     let album: String?
     let albumArtist: String?

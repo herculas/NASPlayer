@@ -40,8 +40,13 @@ struct AlbumDiscView: View {
     
     var tracks: [SongVM]?
     
+    var safeWidth: CGFloat {
+        let logicalWidth: CGFloat = CGFloat(Device.current.logicalResolution?.width ?? 0.0)
+        return logicalWidth - 120
+    }
+    
     var body: some View {
-        if let songs = tracks {
+        if let songs = self.tracks {
             ForEach(songs, id: \.self) { song in
                 Label(
                     title: {
@@ -49,17 +54,18 @@ struct AlbumDiscView: View {
                             VStack(alignment: .leading, spacing: 2) {
                                 Text(song.title)
                                     .font(.callout)
-                                    .frame(width: 300, alignment: .leading)
+                                    .frame(width: self.safeWidth, alignment: .leading)
                                     .lineLimit(1)
                                 Text(song.artist)
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
-                                    .frame(width: 300, alignment: .leading)
+                                    .frame(width: self.safeWidth, alignment: .leading)
                                     .lineLimit(1)
                             }
                             Spacer()
                             Image(systemName: "ellipsis")
                                 .foregroundStyle(.secondary)
+                                .padding(.trailing, 5)
                         }
                     }, icon: {
                         Text("\(song.track)")

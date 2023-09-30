@@ -9,11 +9,10 @@ import SwiftUI
 import Combine
 
 class AlbumCoverService: ObservableObject {
+    private var cancellable: AnyCancellable?
     var coverRequest = CoverRequest()
-    var cancellable: AnyCancellable?
     
     @Published var image: UIImage?
-    
     @Published var isLoading = true
     @Published var error: NetworkError?
     

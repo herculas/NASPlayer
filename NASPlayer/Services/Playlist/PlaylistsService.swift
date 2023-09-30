@@ -9,11 +9,10 @@ import Foundation
 import Combine
 
 class PlaylistsService: ObservableObject {
+    private var cancellable: AnyCancellable?
     var playlistRequest = PlaylistRequest()
-    var cancellable: AnyCancellable?
     
     @Published var playlists: [PlaylistVM]?
-    
     @Published var isLoading = true
     @Published var error: NetworkError?
     

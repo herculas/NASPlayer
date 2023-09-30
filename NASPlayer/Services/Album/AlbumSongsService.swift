@@ -9,13 +9,12 @@ import Foundation
 import Combine
 
 class AlbumSongsService: ObservableObject {
+    private var cancellable: AnyCancellable?
     var songRequest = SongRequest()
-    var cancellable: AnyCancellable?
     
     @Published var songs: [SongVM]?
     @Published var count: Int?
     @Published var duration: Int?
-    
     @Published var isLoading = true
     @Published var error: NetworkError?
     

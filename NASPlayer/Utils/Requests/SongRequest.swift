@@ -11,18 +11,11 @@ import Combine
 enum SongEndpoint: Endpoint {
     case list(album: String)
     
-    var baseUrl: String {
-        return "server.herculas.net"
-    }
-    var port: Int {
-        return 12803
-    }
-    var path: String {
-        return "/webapi/AudioStation/song.cgi"
-    }
-    var method: HTTPMethod {
-        return .get
-    }
+    var baseUrl: String { "server.herculas.net" }
+    var port: Int { 12803 }
+    var path: String { "/webapi/AudioStation/song.cgi" }
+    var method: HTTPMethod { .get }
+    var headers: [String : String] { [:] }
     var params: [URLQueryItem] {
         var params = [
             URLQueryItem(name: "_sid", value: "n8it2WrZ5RDJ_DudfMTLYnaxzI3jgdeircqeKKXMJ5Eo8N1r3bRnr4TDycZl3A5Lczmj9newol8iFM3DxKeigU"),
@@ -39,9 +32,6 @@ enum SongEndpoint: Endpoint {
             params.append(URLQueryItem(name: "album", value: album))
         }
         return params
-    }
-    var headers: [String : String] {
-        return [:]
     }
 }
 

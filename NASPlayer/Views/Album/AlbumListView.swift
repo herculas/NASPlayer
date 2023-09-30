@@ -29,7 +29,7 @@ struct AlbumListView: View {
                 .frame(height: 60)
         }
         .navigationTitle("Albums")
-        .padding(.horizontal)
+        .safeAreaPadding(.horizontal, 10)
     }
 }
 

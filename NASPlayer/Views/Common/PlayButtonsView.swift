@@ -36,11 +36,12 @@ struct PlayButtonsView: View {
     }
     
     private var buttonWidth: CGFloat {
-        return 180
+        let logicalWidth: CGFloat = CGFloat(Device.current.logicalResolution?.width ?? 0.0)
+        return (logicalWidth - 60) / 2
     }
     
     var body: some View {
-        HStack(alignment: .center, spacing: 25) {
+        HStack(alignment: .center, spacing: 20) {
             PlayButtonView()
             ShuffleButtonView()
         }
@@ -51,7 +52,7 @@ struct PlayButtonsView: View {
     @ViewBuilder
     func PlayButtonView() -> some View {
         Button{
-            
+            // TODO: play songs sequentially
         } label: {
             Label("Play", systemImage: "play.fill")
                 .font(.callout)
@@ -67,7 +68,7 @@ struct PlayButtonsView: View {
     @ViewBuilder
     func ShuffleButtonView() -> some View {
         Button(action: {
-            
+            // TODO: play songs randomly
         }, label: {
             Label("Shuffle", systemImage: "shuffle")
                 .font(.callout)

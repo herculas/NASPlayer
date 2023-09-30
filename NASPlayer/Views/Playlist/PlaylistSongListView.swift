@@ -36,6 +36,11 @@ struct PlaylistSongView: View {
         self.songCoverService = SongCoverService(id: song.id)
     }
     
+    var safeWidth: CGFloat {
+        let logicalWidth: CGFloat = CGFloat(Device.current.logicalResolution?.width ?? 0.0)
+        return logicalWidth - 120
+    }
+    
     var body: some View {
         Label(
             title: {
@@ -43,12 +48,12 @@ struct PlaylistSongView: View {
                     VStack(alignment: .leading, spacing: 2){
                         Text(self.song.title)
                             .font(.callout)
-                            .frame(width: 300, alignment: .leading)
+                            .frame(width: self.safeWidth, alignment: .leading)
                             .lineLimit(1)
                         Text(self.song.artist)
                             .font(.caption)
                             .foregroundStyle(.secondary)
-                            .frame(width: 300, alignment: .leading)
+                            .frame(width: self.safeWidth, alignment: .leading)
                             .lineLimit(1)
                     }
                     Spacer()

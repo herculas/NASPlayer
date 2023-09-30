@@ -17,6 +17,11 @@ struct PlaylistEntryView: View {
         self.playlistCoverService = PlaylistCoverService(id: playlist.id)
     }
     
+    var safeWidth: CGFloat {
+        let logicalWidth: CGFloat = CGFloat(Device.current.logicalResolution?.width ?? 0.0)
+        return logicalWidth - 120
+    }
+    
     var body: some View {
         HStack(spacing: 20) {
             if let cover = self.playlistCoverService.image {
@@ -34,7 +39,7 @@ struct PlaylistEntryView: View {
             Text(self.playlist.name)
                 .font(.title3)
                 .fontWeight(.semibold)
-                .frame(maxWidth: 250, alignment: .leading)
+                .frame(maxWidth: self.safeWidth, alignment: .leading)
                 .lineLimit(2)
                 .multilineTextAlignment(.leading)
         }

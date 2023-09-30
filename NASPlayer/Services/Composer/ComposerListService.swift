@@ -1,30 +1,28 @@
 //
-//  AlbumListService.swift
+//  ComposerListService.swift
 //  NASPlayer
 //
-//  Created by 宋睿 on 19/9/2023.
+//  Created by 宋睿 on 1/10/2023.
 //
 
 import Foundation
 import Combine
 
-class AlbumListService: ObservableObject {
+class ComposerListService: ObservableObject {
     private var cancellable: AnyCancellable?
-    var albumRequest = AlbumRequest()
-    var limit: Int?
+    var composerRequest = ComposerRequest()
     
-    @Published var albumList: [AlbumVM]?
+    @Published var composerList: [ComposerVM]?
     @Published var isLoading = true
     @Published var error: NetworkError?
     
     init(limit: Int? = nil) {
-        self.limit = limit
-        self.trigger()
+        self.trigger(limit: limit)
     }
     
-    func trigger() {
-        self.cancellable = self.albumRequest
-            .albumListPublisher(limit: limit)
+    func trigger(limit: Int?) {
+        self.cancellable = self.composerRequest
+            .composerListPublisher(limit: limit)
             .subscribe(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
@@ -34,8 +32,8 @@ class AlbumListService: ObservableObject {
                         self.error = error
                 }
             }, receiveValue: { response in
-                if let albums = response.data?.albums {
-                    self.albumList = albums.map(transform)
+                if let composers = response.data?.composers {
+                    self.composerList = composers.map(transform)
                 }
             })
     }

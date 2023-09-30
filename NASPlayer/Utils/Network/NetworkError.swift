@@ -10,7 +10,6 @@ enum NetworkError: Error, Equatable {
     case noResponse(_ error: String)
     case invalidJson(_ error: String)
     case cannotParseData(_ error: String)
-    
     case apiError(code: Int, error: String)
     case unauthorized(code: Int, error: String)
     case badRequest(code: Int, error: String)

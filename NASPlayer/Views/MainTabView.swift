@@ -15,6 +15,7 @@ struct MainTabView: View {
     var body: some View {
         TabView {
             
+            // MARK: - Browse
             NavigationStack {
                 BrowseView()
             }
@@ -23,6 +24,7 @@ struct MainTabView: View {
                 Text("Browse")
             }
             
+            // MARK: - Albums
             NavigationStack {
                 AlbumListView()
             }
@@ -31,6 +33,7 @@ struct MainTabView: View {
                 Text("Albums")
             }
             
+            // MARK: - Playlists
             NavigationStack {
                 PlaylistsView()
             }
@@ -39,6 +42,7 @@ struct MainTabView: View {
                 Text("Playlists")
             }
             
+            // MARK: My Information and Settings
             NavigationStack {
                 MeView()
             }

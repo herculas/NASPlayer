@@ -10,6 +10,7 @@ import SwiftUI
 struct MeView: View {
     var body: some View {
         Image(systemName: "person.crop.circle.fill")
+            .navigationTitle("Me")
     }
 }
 

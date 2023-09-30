@@ -1,13 +1,13 @@
 //
-//  AlbumCardView.swift
+//  AlbumCoverView.swift
 //  NASPlayer
 //
-//  Created by 宋睿 on 19/9/2023.
+//  Created by 宋睿 on 30/9/2023.
 //
 
 import SwiftUI
 
-struct AlbumCardView: View {
+struct AlbumCoverView: View {
     
     var album: AlbumVM
     @ObservedObject var albumCoverService: AlbumCoverService
@@ -30,7 +30,11 @@ struct AlbumCardView: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: self.cardSize, height: self.cardSize)
                     .clipShape(.rect(cornerRadius: 12))
-                    .shadow(radius: 4, x: 0, y: 0)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(lineWidth: 0.8)
+                            .foregroundStyle(.quinary)
+                    }
             } else {
                 ProgressView()
                     .frame(width: self.cardSize, height: self.cardSize)
@@ -52,5 +56,5 @@ struct AlbumCardView: View {
 }
 
 #Preview {
-    AlbumListView()
+    AlbumCoverView(album: AlbumVM.mock)
 }
