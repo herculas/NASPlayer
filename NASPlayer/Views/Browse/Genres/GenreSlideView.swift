@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct GenreSlideView: View {
+    
+    @ObservedObject var genreListService = GenreListService(limit: 12)
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack(spacing: 10) {
@@ -17,6 +20,15 @@ struct GenreSlideView: View {
                 Image(systemName: "chevron.forward")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
+            }
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack(spacing: 24) {
+                    if let genres = self.genreListService.genreList {
+                        ForEach(genres) { genre in
+                            GenreIconView(genre: genre)
+                        }
+                    }
+                }
             }
         }
     }

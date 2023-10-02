@@ -28,14 +28,9 @@ struct Artist: Codable, Identifiable {
 
 // MARK: - Additional
 struct ArtistAdditional: Codable {
-    let avgRating: ArtistAvgRating?
+    let avgRating: AvgRating?
 
     enum CodingKeys: String, CodingKey {
         case avgRating = "avg_rating"
     }
-}
-
-// MARK: - Artist Average Rating
-struct ArtistAvgRating: Codable {
-    let rating: Float?
 }

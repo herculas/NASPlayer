@@ -54,22 +54,32 @@ class NetworkRequestable: NSObject, Requestable {
         sessionConfig.timeoutIntervalForResource = TimeInterval(self.resTimeout)
         let session = URLSession(configuration: sessionConfig, delegate: self, delegateQueue: nil)
         
-        return session
-            .dataTaskPublisher(for: req.getUrlRequest()!)
-            .tryMap { (data: Data, response: URLResponse) in
-                guard response is HTTPURLResponse else {
-                    throw NetworkError.serverError(code: 0, error: "Server Error!")
+        if let data = session.configuration.urlCache?.cachedResponse(for: req.getUrlRequest()!)?.data,
+           let image = UIImage(data: data) {
+//            print("load data from cache: \(String(describing: req.getUrlRequest()?.url))")
+            return Just(image)
+                .setFailureType(to: NetworkError.self)
+                .receive(on: RunLoop.main)
+                .eraseToAnyPublisher()
+        } else {
+//            print("request data from network")
+            return session
+                .dataTaskPublisher(for: req.getUrlRequest()!)
+                .tryMap { (data: Data, response: URLResponse) in
+                    guard response is HTTPURLResponse else {
+                        throw NetworkError.serverError(code: 0, error: "Response Error!")
+                    }
+                    guard let image = UIImage(data: data) else {
+                        throw NetworkError.serverError(code: 0, error: "Image Parsing Error!")
+                    }
+                    return image
                 }
-                guard let image = UIImage(data: data) else {
-                    throw NetworkError.serverError(code: 0, error: "Server Error!")
+                .mapError { error in
+                    NetworkError.cannotParseData(String(describing: error))
                 }
-                return image
-            }
-            .mapError { error in
-                NetworkError.cannotParseData(String(describing: error))
-            }
-            .receive(on: RunLoop.main)
-            .eraseToAnyPublisher()
+                .receive(on: RunLoop.main)
+                .eraseToAnyPublisher()
+        }
     }
 }
 

@@ -10,10 +10,13 @@ import SwiftUI
 struct BrowseView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            AlbumSlideView().padding(.vertical)
-            ArtistSlideView().padding(.vertical)
-            ComposerSlideView().padding(.vertical)
-            GenreSlideView().padding(.vertical)
+            LazyVStack(spacing: 24) {
+                AlbumSlideView()
+                ArtistSlideView()
+                ComposerSlideView()
+                GenreSlideView()
+            }
+            Spacer().frame(height: 60)
         }
         .navigationTitle("Browse")
         .padding(.horizontal)

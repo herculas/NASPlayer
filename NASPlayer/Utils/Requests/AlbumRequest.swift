@@ -12,6 +12,7 @@ enum AlbumEndpoint: Endpoint {
     case list(limit: Int?)
     case artist(artist: String)
     case composer(composer: String)
+    case genre(genre: String)
     
     var baseUrl: String { "server.herculas.net" }
     var port: Int { 12803 }
@@ -35,6 +36,10 @@ enum AlbumEndpoint: Endpoint {
                 params.append(URLQueryItem(name: "artist", value: artist))
             case .composer(let composer):
                 params.append(URLQueryItem(name: "composer", value: composer))
+            case .genre(let genre):
+                params.append(URLQueryItem(name: "genre", value: genre))
+                params.append(URLQueryItem(name: "sort_by", value: "year"))
+                params.append(URLQueryItem(name: "sort_direction", value: "desc"))
         }
         return params
     }
@@ -57,6 +62,12 @@ class AlbumRequest {
     
     func albumSearchPublisher(composer: String) -> AnyPublisher<Response<Albums>, NetworkError> {
         let endpoint = AlbumEndpoint.composer(composer: composer)
+        let request = Request(endpoint: endpoint, timeout: 1000)
+        return self.requestable.issue(request: request)
+    }
+    
+    func albumSearchPublisher(genre: String) -> AnyPublisher<Response<Albums>, NetworkError> {
+        let endpoint = AlbumEndpoint.genre(genre: genre)
         let request = Request(endpoint: endpoint, timeout: 1000)
         return self.requestable.issue(request: request)
     }

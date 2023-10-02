@@ -1,5 +1,5 @@
 //
-//  Composer.swift
+//  Genre.swift
 //  NASPlayer
 //
 //  Created by 宋睿 on 1/10/2023.
@@ -7,18 +7,18 @@
 
 import Foundation
 
-// MARK: - Composer List
-struct Composers: Codable {
-    let composers: [Composer]?
+// MARK: - Genre List
+struct Genres: Codable {
+    let genres: [Genre]?
     let offset: Int?
     let total: Int?
 }
 
-// MARK: - Composer
-struct Composer: Codable, Identifiable {
+// MARK: - Genre
+struct Genre: Codable, Identifiable {
     let id = UUID()
     let name: String
-    let additional: ComposerAdditional?
+    let additional: GenreAdditional?
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -26,8 +26,8 @@ struct Composer: Codable, Identifiable {
     }
 }
 
-// MARK: - Composer Additional
-struct ComposerAdditional: Codable {
+// MARK: - Additional
+struct GenreAdditional: Codable {
     let avgRating: AvgRating?
 
     enum CodingKeys: String, CodingKey {
