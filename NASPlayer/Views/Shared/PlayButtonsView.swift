@@ -51,7 +51,7 @@ struct PlayButtonsView: View {
     
     @ViewBuilder
     func PlayButtonView() -> some View {
-        Button{
+        Button {
             // TODO: play songs sequentially
         } label: {
             Label("Play", systemImage: "play.fill")
@@ -67,14 +67,14 @@ struct PlayButtonsView: View {
     
     @ViewBuilder
     func ShuffleButtonView() -> some View {
-        Button(action: {
+        Button {
             // TODO: play songs randomly
-        }, label: {
+        } label: {
             Label("Shuffle", systemImage: "shuffle")
                 .font(.callout)
                 .fontWeight(.semibold)
                 .labelStyle(.titleAndIcon)
-        })
+        }
         .foregroundStyle(.accent)
         .frame(width: self.buttonWidth, height: 45)
         .background(self.buttonBackground)

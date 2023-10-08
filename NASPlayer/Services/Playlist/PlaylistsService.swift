@@ -17,10 +17,10 @@ class PlaylistsService: ObservableObject {
     @Published var error: NetworkError?
     
     init() {
-        self.trigger()
+        self.load()
     }
     
-    func trigger() {
+    func load() {
         self.cancellable = self.playlistRequest
             .listPublisher()
             .subscribe(on: DispatchQueue.main)

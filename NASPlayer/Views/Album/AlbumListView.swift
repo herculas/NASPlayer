@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct AlbumListView: View {
-    
-    @ObservedObject var albumListService = AlbumListService()
+    @StateObject var albumListService = AlbumListService()
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {

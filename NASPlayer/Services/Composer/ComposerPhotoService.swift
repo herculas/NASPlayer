@@ -18,10 +18,10 @@ class ComposerPhotoService: ObservableObject {
     @Published var error: NetworkError?
     
     init(name: String) {
-        self.trigger(name: name)
+        self.load(name: name)
     }
     
-    func trigger(name: String) {
+    func load(name: String) {
         self.cancellable = self.albumRequest
             .albumSearchPublisher(composer: name)
             .flatMap({ response in

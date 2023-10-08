@@ -26,7 +26,7 @@ struct Genre: Codable, Identifiable {
     }
 }
 
-// MARK: - Additional
+// MARK: - Genre Additional Parameters
 struct GenreAdditional: Codable {
     let avgRating: AvgRating?
 

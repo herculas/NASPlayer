@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 public struct Request {
     let endpoint: Endpoint
@@ -20,7 +21,7 @@ public struct Request {
     
     func getUrlRequest() -> URLRequest? {
         guard let url = self.endpoint.getUrl() else {
-            print("url not found.")
+            Logger.network.error("URL not found!")
             return nil
         }
         var request: URLRequest = URLRequest(url: url)

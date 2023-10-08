@@ -19,10 +19,10 @@ class AlbumSongsService: ObservableObject {
     @Published var error: NetworkError?
     
     init(album: String) {
-        self.trigger(album: album)
+        self.load(album: album)
     }
     
-    func trigger(album: String) {
+    func load(album: String) {
         self.cancellable = self.songRequest
             .songsPublisher(album: album)
             .subscribe(on: DispatchQueue.main)

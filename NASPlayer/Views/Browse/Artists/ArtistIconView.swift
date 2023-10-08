@@ -16,8 +16,9 @@ struct ArtistIconView: View {
         self.artist = artist
         self.artistPhotoService = ArtistPhotoService(name: artist.name)
     }
+    
     var cardSize: CGFloat {
-        let logicalWidth: CGFloat = CGFloat(Device.current.logicalResolution?.width ?? 0.0)
+        let logicalWidth: CGFloat = Device.current.logicalResolution?.width ?? 0.0
         return (logicalWidth - 56) / 4
     }
     

@@ -17,10 +17,10 @@ class GenreListService: ObservableObject {
     @Published var error: NetworkError?
     
     init(limit: Int? = nil) {
-        self.trigger(limit: limit)
+        self.load(limit: limit)
     }
     
-    func trigger(limit: Int?) {
+    func load(limit: Int?) {
         self.cancellable = self.genreRequest
             .genreListPublisher(limit: limit)
             .subscribe(on: DispatchQueue.main)

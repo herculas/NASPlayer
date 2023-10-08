@@ -15,20 +15,19 @@ enum HTTPMethod: String {
 }
 
 protocol Endpoint {
-    var baseUrl: String { get }
+    var host: String { get }
     var port: Int { get }
     var path: String { get }
     var method: HTTPMethod { get }
-    
-    var params: [URLQueryItem] { get }
     var headers: [String: String] { get }
+    var params: [URLQueryItem] { get }
 }
 
 extension Endpoint {
     func getUrl() -> URL? {
         var component = URLComponents()
         component.scheme = "https"
-        component.host = self.baseUrl
+        component.host = self.host
         component.port = self.port
         component.path = self.path
         component.queryItems = self.params

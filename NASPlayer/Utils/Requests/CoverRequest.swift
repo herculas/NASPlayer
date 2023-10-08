@@ -12,14 +12,14 @@ enum CoverEndpoint: Endpoint {
     case album(title: String, artist: String)
     case song(id: String)
     
-    var baseUrl: String { "server.herculas.net" }
-    var port: Int { 12803 }
+    var host: String { UserStore.shared.host }
+    var port: Int { UserStore.shared.port }
     var path: String { "/webapi/AudioStation/cover.cgi" }
     var method: HTTPMethod { .get }
     var headers: [String : String] { [:] }
     var params: [URLQueryItem] {
         var params = [
-            URLQueryItem(name: "_sid", value: "n8it2WrZ5RDJ_DudfMTLYnaxzI3jgdeircqeKKXMJ5Eo8N1r3bRnr4TDycZl3A5Lczmj9newol8iFM3DxKeigU"),
+            URLQueryItem(name: "_sid", value: UserStore.shared.sid),
             URLQueryItem(name: "api", value: "SYNO.AudioStation.Cover"),
             URLQueryItem(name: "library", value: "all"),
         ]

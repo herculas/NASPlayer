@@ -42,32 +42,15 @@ struct MainTabView: View {
                 Text("Playlists")
             }
             
-            // MARK: My Information and Settings
+            // MARK: Settings
             NavigationStack {
-                MeView()
+                SettingView()
             }
             .tabItem {
-                Image(systemName: "person.crop.circle.fill")
-                Text("Me")
+                Image(systemName: "gear")
+                Text("Setting")
             }
         }
-//        .safeAreaInset(edge: .bottom) {
-//            ReducedPlayerView(
-//                playerExpanded: self.$playerExpanded,
-//                animation: self.animation
-//            )
-//        }
-//        .overlay {
-//            ExpandedPlayerView(
-//                playerExpanded: self.$playerExpanded,
-//                animation: self.animation
-//            ).transition(
-//                .asymmetric(
-//                    insertion: .identity,
-//                    removal: .offset(y: -5)
-//                )
-//            )
-//        }
     }
 }
 

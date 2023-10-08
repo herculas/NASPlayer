@@ -18,10 +18,10 @@ class PlaylistCoverService: ObservableObject {
     @Published var error: NetworkError?
     
     init(id: String) {
-        self.trigger(id: id)
+        self.load(id: id)
     }
     
-    func trigger(id: String) {
+    func load(id: String) {
         self.cancellable = self.playlistRequest
             .detailPublisher(id: id)
             .flatMap({ response in

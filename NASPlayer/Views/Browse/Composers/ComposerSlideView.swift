@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ComposerSlideView: View {
     
-    @ObservedObject var composerListService = ComposerListService(limit: 12)
+    @StateObject var composerListService = ComposerListService(limit: 12)
     
     var body: some View {
         VStack(alignment: .leading) {

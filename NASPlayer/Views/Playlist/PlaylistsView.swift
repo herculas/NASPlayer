@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PlaylistsView: View {
     
-    @ObservedObject var playlistsService = PlaylistsService()
+    @StateObject var playlistsService = PlaylistsService()
     
     var body: some View {
         List {

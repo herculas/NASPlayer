@@ -11,12 +11,15 @@
 		FC0C99C92ABB131E00259897 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C99C82ABB131E00259897 /* Playlist.swift */; };
 		FC0C99CB2ABB1CEF00259897 /* PlaylistEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C99CA2ABB1CEF00259897 /* PlaylistEntryView.swift */; };
 		FC0C99CF2ABB225600259897 /* PlaylistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C99CE2ABB225500259897 /* PlaylistDetailView.swift */; };
+		FC0F9A112AD198A4005AB8E6 /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0F9A102AD198A4005AB8E6 /* SettingStore.swift */; };
 		FC265DE32AC95E5800029802 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC265DE22AC95E5800029802 /* Genre.swift */; };
 		FC265DE52AC95E9500029802 /* AvgRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC265DE42AC95E9400029802 /* AvgRating.swift */; };
 		FC265DE72AC95F3500029802 /* GenreVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC265DE62AC95F3500029802 /* GenreVM.swift */; };
 		FC265DE92AC9623000029802 /* GenrePhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC265DE82AC9623000029802 /* GenrePhotoService.swift */; };
 		FC265DEB2AC9626600029802 /* GenreIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC265DEA2AC9626600029802 /* GenreIconView.swift */; };
+		FC37CEEA2AD296AC00D64174 /* ListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC37CEE92AD296AC00D64174 /* ListStore.swift */; };
 		FC4181662AC99964008A5E91 /* URLCache+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4181652AC99964008A5E91 /* URLCache+.swift */; };
+		FC4D3BB52ACDD75300C272F8 /* Logger+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4D3BB42ACDD75300C272F8 /* Logger+.swift */; };
 		FC51F4772AC839CF00403DB5 /* ArtistIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51F4762AC839CF00403DB5 /* ArtistIconView.swift */; };
 		FC51F4792AC83A0600403DB5 /* ArtistVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51F4782AC83A0600403DB5 /* ArtistVM.swift */; };
 		FC51F47B2AC8642500403DB5 /* ArtistPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51F47A2AC8642500403DB5 /* ArtistPhotoService.swift */; };
@@ -44,6 +47,7 @@
 		FC921E9B2ABD8FF200D711A4 /* CoverRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC921E9A2ABD8FF200D711A4 /* CoverRequest.swift */; };
 		FC9A1D9F2AC1B18400F1E33E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FC9A1D9E2AC1B18400F1E33E /* Localizable.xcstrings */; };
 		FC9EDFD02AB9C09B00847101 /* MultiRowLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9EDFCF2AB9C09B00847101 /* MultiRowLabelStyle.swift */; };
+		FCA6CB872AD1B79900FD8150 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6CB862AD1B79900FD8150 /* UserStore.swift */; };
 		FCABF7F32AB97B0F00B7E5BA /* NASPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF7F22AB97B0F00B7E5BA /* NASPlayerApp.swift */; };
 		FCABF7F52AB97B0F00B7E5BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF7F42AB97B0F00B7E5BA /* ContentView.swift */; };
 		FCABF7F72AB97B1000B7E5BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCABF7F62AB97B1000B7E5BA /* Assets.xcassets */; };
@@ -69,7 +73,7 @@
 		FCABF8502AB980F000B7E5BA /* SongVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF84F2AB980F000B7E5BA /* SongVM.swift */; };
 		FCABF8562AB9815400B7E5BA /* AlbumListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF8552AB9815400B7E5BA /* AlbumListService.swift */; };
 		FCABF85C2AB981B000B7E5BA /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF85B2AB981B000B7E5BA /* BrowseView.swift */; };
-		FCABF85E2AB981C800B7E5BA /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF85D2AB981C800B7E5BA /* MeView.swift */; };
+		FCABF85E2AB981C800B7E5BA /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF85D2AB981C800B7E5BA /* SettingView.swift */; };
 		FCABF8602AB981DD00B7E5BA /* PlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF85F2AB981DD00B7E5BA /* PlaylistsView.swift */; };
 		FCABF8622AB981FA00B7E5BA /* AlbumCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF8612AB981FA00B7E5BA /* AlbumCardView.swift */; };
 		FCABF8642AB9822A00B7E5BA /* AlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABF8632AB9822A00B7E5BA /* AlbumListView.swift */; };
@@ -91,8 +95,6 @@
 		FCEE7F1A2AC29E8B00505EF4 /* SongCoverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE7F192AC29E8B00505EF4 /* SongCoverService.swift */; };
 		FCEE7F1C2AC2A64700505EF4 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE7F1B2AC2A64700505EF4 /* WaveformView.swift */; };
 		FCEE7F1E2AC2B5A800505EF4 /* UITabBarController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE7F1D2AC2B5A800505EF4 /* UITabBarController+.swift */; };
-		FCEE7F222AC2F67800505EF4 /* ExpandedPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE7F212AC2F67800505EF4 /* ExpandedPlayerView.swift */; };
-		FCEE7F242AC2F68800505EF4 /* ReducedPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE7F232AC2F68800505EF4 /* ReducedPlayerView.swift */; };
 		FCEE7F262AC309CD00505EF4 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE7F252AC309CD00505EF4 /* View+.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,12 +120,15 @@
 		FC0C99C82ABB131E00259897 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		FC0C99CA2ABB1CEF00259897 /* PlaylistEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistEntryView.swift; sourceTree = "<group>"; };
 		FC0C99CE2ABB225500259897 /* PlaylistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailView.swift; sourceTree = "<group>"; };
+		FC0F9A102AD198A4005AB8E6 /* SettingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStore.swift; sourceTree = "<group>"; };
 		FC265DE22AC95E5800029802 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		FC265DE42AC95E9400029802 /* AvgRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvgRating.swift; sourceTree = "<group>"; };
 		FC265DE62AC95F3500029802 /* GenreVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreVM.swift; sourceTree = "<group>"; };
 		FC265DE82AC9623000029802 /* GenrePhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenrePhotoService.swift; sourceTree = "<group>"; };
 		FC265DEA2AC9626600029802 /* GenreIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreIconView.swift; sourceTree = "<group>"; };
+		FC37CEE92AD296AC00D64174 /* ListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStore.swift; sourceTree = "<group>"; };
 		FC4181652AC99964008A5E91 /* URLCache+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLCache+.swift"; sourceTree = "<group>"; };
+		FC4D3BB42ACDD75300C272F8 /* Logger+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+.swift"; sourceTree = "<group>"; };
 		FC51F4762AC839CF00403DB5 /* ArtistIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistIconView.swift; sourceTree = "<group>"; };
 		FC51F4782AC83A0600403DB5 /* ArtistVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistVM.swift; sourceTree = "<group>"; };
 		FC51F47A2AC8642500403DB5 /* ArtistPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistPhotoService.swift; sourceTree = "<group>"; };
@@ -151,6 +156,7 @@
 		FC921E9A2ABD8FF200D711A4 /* CoverRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverRequest.swift; sourceTree = "<group>"; };
 		FC9A1D9E2AC1B18400F1E33E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		FC9EDFCF2AB9C09B00847101 /* MultiRowLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiRowLabelStyle.swift; sourceTree = "<group>"; };
+		FCA6CB862AD1B79900FD8150 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		FCABF7EF2AB97B0F00B7E5BA /* NASPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCABF7F22AB97B0F00B7E5BA /* NASPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASPlayerApp.swift; sourceTree = "<group>"; };
 		FCABF7F42AB97B0F00B7E5BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -180,7 +186,7 @@
 		FCABF84F2AB980F000B7E5BA /* SongVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongVM.swift; sourceTree = "<group>"; };
 		FCABF8552AB9815400B7E5BA /* AlbumListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListService.swift; sourceTree = "<group>"; };
 		FCABF85B2AB981B000B7E5BA /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
-		FCABF85D2AB981C800B7E5BA /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		FCABF85D2AB981C800B7E5BA /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		FCABF85F2AB981DD00B7E5BA /* PlaylistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsView.swift; sourceTree = "<group>"; };
 		FCABF8612AB981FA00B7E5BA /* AlbumCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCardView.swift; sourceTree = "<group>"; };
 		FCABF8632AB9822A00B7E5BA /* AlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListView.swift; sourceTree = "<group>"; };
@@ -202,8 +208,6 @@
 		FCEE7F192AC29E8B00505EF4 /* SongCoverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCoverService.swift; sourceTree = "<group>"; };
 		FCEE7F1B2AC2A64700505EF4 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
 		FCEE7F1D2AC2B5A800505EF4 /* UITabBarController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+.swift"; sourceTree = "<group>"; };
-		FCEE7F212AC2F67800505EF4 /* ExpandedPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedPlayerView.swift; sourceTree = "<group>"; };
-		FCEE7F232AC2F68800505EF4 /* ReducedPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducedPlayerView.swift; sourceTree = "<group>"; };
 		FCEE7F252AC309CD00505EF4 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +236,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC0F9A0F2AD19892005AB8E6 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				FC0F9A102AD198A4005AB8E6 /* SettingStore.swift */,
+				FCA6CB862AD1B79900FD8150 /* UserStore.swift */,
+				FC37CEE92AD296AC00D64174 /* ListStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
 		FC265DDF2AC95B4000029802 /* Genre */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,7 +290,7 @@
 			path = Genres;
 			sourceTree = "<group>";
 		};
-		FC76D1FC2ABC3805000A3A08 /* Common */ = {
+		FC76D1FC2ABC3805000A3A08 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				FC76D1FD2ABC3853000A3A08 /* BannerCoverView.swift */,
@@ -284,10 +298,8 @@
 				FC76D2012ABC39D8000A3A08 /* PlayButtonsView.swift */,
 				FC76D2052ABC3C2E000A3A08 /* StatisticsView.swift */,
 				FCEE7F1B2AC2A64700505EF4 /* WaveformView.swift */,
-				FCEE7F232AC2F68800505EF4 /* ReducedPlayerView.swift */,
-				FCEE7F212AC2F67800505EF4 /* ExpandedPlayerView.swift */,
 			);
-			path = Common;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		FC76D2072ABC5593000A3A08 /* Network */ = {
@@ -429,11 +441,11 @@
 			children = (
 				FCABF7F42AB97B0F00B7E5BA /* ContentView.swift */,
 				FCABF8672AB9828100B7E5BA /* MainTabView.swift */,
-				FC76D1FC2ABC3805000A3A08 /* Common */,
+				FC76D1FC2ABC3805000A3A08 /* Shared */,
 				FCABF8582AB9817800B7E5BA /* Browse */,
 				FCABF8572AB9817100B7E5BA /* Album */,
 				FCABF85A2AB9818300B7E5BA /* Playlist */,
-				FCABF8592AB9817F00B7E5BA /* Me */,
+				FCABF8592AB9817F00B7E5BA /* Setting */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -458,6 +470,7 @@
 				FCABF8302AB97EEB00B7E5BA /* CharacterSet+.swift */,
 				FCABF8322AB97F0700B7E5BA /* Color+.swift */,
 				FCABF8342AB97F2600B7E5BA /* Dictionary+.swift */,
+				FC4D3BB42ACDD75300C272F8 /* Logger+.swift */,
 				FCEE7F1D2AC2B5A800505EF4 /* UITabBarController+.swift */,
 				FC4181652AC99964008A5E91 /* URLCache+.swift */,
 				FCEE7F252AC309CD00505EF4 /* View+.swift */,
@@ -468,6 +481,7 @@
 		FCABF8432AB9807400B7E5BA /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FC0F9A0F2AD19892005AB8E6 /* Stores */,
 				FCABF8442AB9808500B7E5BA /* Models */,
 				FCABF8462AB9809300B7E5BA /* View Models */,
 			);
@@ -539,12 +553,12 @@
 			path = Browse;
 			sourceTree = "<group>";
 		};
-		FCABF8592AB9817F00B7E5BA /* Me */ = {
+		FCABF8592AB9817F00B7E5BA /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				FCABF85D2AB981C800B7E5BA /* MeView.swift */,
+				FCABF85D2AB981C800B7E5BA /* SettingView.swift */,
 			);
-			path = Me;
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		FCABF85A2AB9818300B7E5BA /* Playlist */ = {
@@ -731,7 +745,7 @@
 				FC51F4792AC83A0600403DB5 /* ArtistVM.swift in Sources */,
 				FC51F4772AC839CF00403DB5 /* ArtistIconView.swift in Sources */,
 				FC265DEB2AC9626600029802 /* GenreIconView.swift in Sources */,
-				FCABF85E2AB981C800B7E5BA /* MeView.swift in Sources */,
+				FCABF85E2AB981C800B7E5BA /* SettingView.swift in Sources */,
 				FCABF84C2AB980C800B7E5BA /* Song.swift in Sources */,
 				FC686C6B2AC8232600BACD56 /* GenreSlideView.swift in Sources */,
 				FCD068392AC88B7300487232 /* Composer.swift in Sources */,
@@ -752,12 +766,14 @@
 				FC265DE92AC9623000029802 /* GenrePhotoService.swift in Sources */,
 				FC921E9B2ABD8FF200D711A4 /* CoverRequest.swift in Sources */,
 				FCABF84A2AB980B800B7E5BA /* Response.swift in Sources */,
+				FC4D3BB52ACDD75300C272F8 /* Logger+.swift in Sources */,
 				FCABF82B2AB97DF600B7E5BA /* Device+Params.swift in Sources */,
 				FCD068402AC890D800487232 /* ComposerPhotoService.swift in Sources */,
 				FCD0683B2AC88C0A00487232 /* ComposerVM.swift in Sources */,
 				FCCF1E052AC7EC3900AD04DD /* GenreRequest.swift in Sources */,
 				FC921E992ABD8CCC00D711A4 /* AlbumCoverService.swift in Sources */,
 				FCABF82F2AB97E9000B7E5BA /* Device+Collections.swift in Sources */,
+				FC37CEEA2AD296AC00D64174 /* ListStore.swift in Sources */,
 				FCCF1E0B2AC7F23000AD04DD /* ComposerRequest.swift in Sources */,
 				FCABF8292AB97D7800B7E5BA /* Device+Functions.swift in Sources */,
 				FCABF8602AB981DD00B7E5BA /* PlaylistsView.swift in Sources */,
@@ -771,13 +787,13 @@
 				FC921E972ABD8CC400D711A4 /* PlaylistCoverService.swift in Sources */,
 				FCABF8662AB9823F00B7E5BA /* AlbumDetailView.swift in Sources */,
 				FCCF1E072AC7EC4000AD04DD /* ArtistRequest.swift in Sources */,
+				FC0F9A112AD198A4005AB8E6 /* SettingStore.swift in Sources */,
 				FCABF8562AB9815400B7E5BA /* AlbumListService.swift in Sources */,
 				FC686C692AC8231D00BACD56 /* ComposerSlideView.swift in Sources */,
 				FC76D2192ABC76BE000A3A08 /* PlaylistRequest.swift in Sources */,
 				FC76D20B2ABC56D3000A3A08 /* Request.swift in Sources */,
 				FC0C99C72ABB130E00259897 /* PlaylistVM.swift in Sources */,
 				FCABF8352AB97F2600B7E5BA /* Dictionary+.swift in Sources */,
-				FCEE7F222AC2F67800505EF4 /* ExpandedPlayerView.swift in Sources */,
 				FC76D20D2ABC5BBB000A3A08 /* Requestable.swift in Sources */,
 				FCABF8232AB97C5200B7E5BA /* Device.swift in Sources */,
 				FC0C99CF2ABB225600259897 /* PlaylistDetailView.swift in Sources */,
@@ -795,7 +811,6 @@
 				FC4181662AC99964008A5E91 /* URLCache+.swift in Sources */,
 				FC76D2042ABC3B01000A3A08 /* AlbumSongListView.swift in Sources */,
 				FCEE7F262AC309CD00505EF4 /* View+.swift in Sources */,
-				FCEE7F242AC2F68800505EF4 /* ReducedPlayerView.swift in Sources */,
 				FC76D2062ABC3C2E000A3A08 /* StatisticsView.swift in Sources */,
 				FC76D2092ABC55A4000A3A08 /* Endpoint.swift in Sources */,
 				FCABF8332AB97F0700B7E5BA /* Color+.swift in Sources */,
@@ -803,6 +818,7 @@
 				FCEE7F1E2AC2B5A800505EF4 /* UITabBarController+.swift in Sources */,
 				FC76D2112ABC631B000A3A08 /* AlbumRequest.swift in Sources */,
 				FCABF7F32AB97B0F00B7E5BA /* NASPlayerApp.swift in Sources */,
+				FCA6CB872AD1B79900FD8150 /* UserStore.swift in Sources */,
 				FCABF8642AB9822A00B7E5BA /* AlbumListView.swift in Sources */,
 				FCABF8622AB981FA00B7E5BA /* AlbumCardView.swift in Sources */,
 				FCABF8392AB97F5300B7E5BA /* Genre+Functions.swift in Sources */,
@@ -975,11 +991,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NASPlayer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -987,9 +1004,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.herculas.NASPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1005,11 +1025,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NASPlayer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1017,9 +1038,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.herculas.NASPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1036,9 +1060,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.herculas.NASPlayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASPlayer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NASPlayer";
 			};
 			name = Debug;
@@ -1056,9 +1083,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.herculas.NASPlayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASPlayer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NASPlayer";
 			};
 			name = Release;
@@ -1074,9 +1104,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.herculas.NASPlayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = NASPlayer;
 			};
 			name = Debug;
@@ -1092,9 +1125,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.herculas.NASPlayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = NASPlayer;
 			};
 			name = Release;

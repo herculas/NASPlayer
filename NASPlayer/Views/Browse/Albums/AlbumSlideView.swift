@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AlbumSlideView: View {
     
-    @ObservedObject var albumListService = AlbumListService(limit: 6)
+    @StateObject var albumListService = AlbumListService(limit: 6)
     
     var body: some View {
         VStack(alignment: .leading) {

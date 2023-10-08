@@ -17,10 +17,10 @@ class SongCoverService: ObservableObject {
     @Published var error: NetworkError?
     
     init(id: String) {
-        self.trigger(id: id)
+        self.load(id: id)
     }
     
-    func trigger(id: String) {
+    func load(id: String) {
         self.cancellable = self.coverRequest
             .songPublisher(id: id)
             .subscribe(on: DispatchQueue.main)

@@ -67,6 +67,12 @@
                       "state" : "translated",
                       "value" : "%arg hours"
                     }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "new",
+                      "value" : ""
+                    }
                   }
                 }
               }
@@ -123,6 +129,12 @@
                       "state" : "translated",
                       "value" : "%arg 時間"
                     }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : ""
+                    }
                   }
                 }
               }
@@ -172,6 +184,12 @@
                     "stringUnit" : {
                       "state" : "translated",
                       "value" : "%arg 小时"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : ""
                     }
                   }
                 }
@@ -223,6 +241,12 @@
                       "state" : "translated",
                       "value" : "%arg 小時"
                     }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : ""
+                    }
                   }
                 }
               }
@@ -245,172 +269,6 @@
         }
       }
     },
-    "%lld songs, %lld minutes" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%#@arg1 songs@, %#@arg2 minutes@"
-          },
-          "substitutions" : {
-            "arg1 songs" : {
-              "argNum" : 1,
-              "formatSpecifier" : "lld",
-              "variations" : {
-                "plural" : {
-                  "one" : {
-                    "stringUnit" : {
-                      "state" : "translated",
-                      "value" : "%arg song"
-                    }
-                  },
-                  "other" : {
-                    "stringUnit" : {
-                      "state" : "translated",
-                      "value" : "%arg songs"
-                    }
-                  }
-                }
-              }
-            },
-            "arg2 minutes" : {
-              "argNum" : 2,
-              "formatSpecifier" : "lld",
-              "variations" : {
-                "plural" : {
-                  "one" : {
-                    "stringUnit" : {
-                      "state" : "translated",
-                      "value" : "%arg minute"
-                    }
-                  },
-                  "other" : {
-                    "stringUnit" : {
-                      "state" : "translated",
-                      "value" : "%arg minutes"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%#@arg1 songs@、%#@arg2 minutes@"
-          },
-          "substitutions" : {
-            "arg1 songs" : {
-              "argNum" : 1,
-              "formatSpecifier" : "lld",
-              "variations" : {
-                "plural" : {
-                  "other" : {
-                    "stringUnit" : {
-                      "state" : "translated",
-                      "value" : "%arg 曲"
-                    }
-                  }
-                }
-              }
-            },
-            "arg2 minutes" : {
-              "argNum" : 2,
-              "formatSpecifier" : "lld",
-              "variations" : {
-                "plural" : {
-                  "other" : {
-                    "stringUnit" : {
-                      "state" : "translated",
-                      "value" : "%arg 分"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%#@arg1 songs@，%#@arg2 minutes@"
-          },
-          "substitutions" : {
-            "arg1 songs" : {
-              "argNum" : 1,
-              "formatSpecifier" : "lld",
-              "variations" : {
-                "plural" : {
-                  "other" : {
-                    "stringUnit" : {
-                      "state" : "translated",
-                      "value" : "%arg 首歌"
-                    }
-                  }
-                }
-              }
-            },
-            "arg2 minutes" : {
-              "argNum" : 2,
-              "formatSpecifier" : "lld",
-              "variations" : {
-                "plural" : {
-                  "other" : {
-                    "stringUnit" : {
-                      "state" : "translated",
-                      "value" : "%arg 分钟"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%#@arg1 songs@，%#@arg2 minutes@"
-          },
-          "substitutions" : {
-            "arg1 songs" : {
-              "argNum" : 1,
-              "formatSpecifier" : "lld",
-              "variations" : {
-                "plural" : {
-                  "other" : {
-                    "stringUnit" : {
-                      "state" : "translated",
-                      "value" : "%arg 首歌"
-                    }
-                  }
-                }
-              }
-            },
-            "arg2 minutes" : {
-              "argNum" : 2,
-              "formatSpecifier" : "lld",
-              "variations" : {
-                "plural" : {
-                  "other" : {
-                    "stringUnit" : {
-                      "state" : "translated",
-                      "value" : "%arg 分鐘"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "0:00" : {
-
-    },
-    "3:33" : {
-
-    },
     "Albums" : {
       "localizations" : {
         "ja" : {
@@ -429,6 +287,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "專輯"
+          }
+        }
+      }
+    },
+    "Appearances" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "外観"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "外观"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "外觀"
           }
         }
       }
@@ -455,6 +335,28 @@
         }
       }
     },
+    "Big Cover Mode" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ビッグカバーモード"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大封面模式"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大封面模式"
+          }
+        }
+      }
+    },
     "Browse" : {
       "localizations" : {
         "ja" : {
@@ -477,6 +379,94 @@
         }
       }
     },
+    "Cache" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャッシュ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "缓存"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快取"
+          }
+        }
+      }
+    },
+    "Cache Limit" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャッシュ制限"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "缓存上限"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快取上限"
+          }
+        }
+      }
+    },
+    "Clear Cache" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャッシュ消去"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除缓存"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除快取"
+          }
+        }
+      }
+    },
+    "Color Scheme" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カラースキーム"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "颜色主题"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "色彩方案"
+          }
+        }
+      }
+    },
     "Composers" : {
       "localizations" : {
         "ja" : {
@@ -495,6 +485,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "作曲者"
+          }
+        }
+      }
+    },
+    "Dark mode" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダークモード"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "深色模式"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "深色模式"
           }
         }
       }
@@ -543,27 +555,24 @@
         }
       }
     },
-    "Jon's Airpods" : {
-
-    },
-    "Me" : {
+    "Light mode" : {
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "私"
+            "value" : "ライトモード"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我的"
+            "value" : "浅色模式"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我的"
+            "value" : "淺色模式"
           }
         }
       }
@@ -612,6 +621,28 @@
         }
       }
     },
+    "Setting" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "セッティング"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        }
+      }
+    },
     "Shuffle" : {
       "localizations" : {
         "ja" : {
@@ -634,11 +665,49 @@
         }
       }
     },
-    "上海烛龙" : {
-
+    "Sync with System" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "システムと同期"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "与系统一致"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "與系統一致"
+          }
+        }
+      }
     },
-    "花下重门" : {
-
+    "View Profiles" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プロフィールを見る"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看个人资料"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看個人資料"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

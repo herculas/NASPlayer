@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ArtistSlideView: View {
     
-    @ObservedObject var artistListService = ArtistListService(limit: 12)
+    @StateObject var artistListService = ArtistListService(limit: 12)
     
     var body: some View {
         VStack(alignment: .leading) {

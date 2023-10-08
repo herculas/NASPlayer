@@ -17,10 +17,10 @@ class AlbumCoverService: ObservableObject {
     @Published var error: NetworkError?
     
     init(album: AlbumVM) {
-        self.trigger(title: album.name, artist: album.albumArtist)
+        self.load(title: album.name, artist: album.albumArtist)
     }
     
-    func trigger(title: String, artist: String) {
+    func load(title: String, artist: String) {
         self.cancellable = self.coverRequest
             .albumPublisher(title: title, artist: artist)
             .subscribe(on: DispatchQueue.main)

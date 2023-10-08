@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GenreSlideView: View {
     
-    @ObservedObject var genreListService = GenreListService(limit: 12)
+    @StateObject var genreListService = GenreListService(limit: 12)
     
     var body: some View {
         VStack(alignment: .leading) {

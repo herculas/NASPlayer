@@ -11,18 +11,16 @@ import Combine
 class AlbumListService: ObservableObject {
     private var cancellable: AnyCancellable?
     var albumRequest = AlbumRequest()
-    var limit: Int?
     
     @Published var albumList: [AlbumVM]?
     @Published var isLoading = true
     @Published var error: NetworkError?
     
     init(limit: Int? = nil) {
-        self.limit = limit
-        self.trigger()
+        self.load(limit: limit)
     }
     
-    func trigger() {
+    func load(limit: Int?) {
         self.cancellable = self.albumRequest
             .albumListPublisher(limit: limit)
             .subscribe(on: DispatchQueue.main)
