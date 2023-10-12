@@ -8,6 +8,8 @@
 import SwiftUI
 
 final class ListStore: ObservableObject {
-//    @AppStorage("list.list") var list: [String] = []
+    static let shared = ListStore()
+    
+    @AppStorage("list.list") var list: [String] = []
     @AppStorage("list.offset") var offset: Int = 0
 }

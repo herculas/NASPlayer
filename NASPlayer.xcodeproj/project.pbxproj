@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC01F86D2AD83AEB00E0F43B /* Date+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC01F86C2AD83AEB00E0F43B /* Date+RawRepresentable.swift */; };
+		FC01F86F2AD83BBF00E0F43B /* Array+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC01F86E2AD83BBF00E0F43B /* Array+RawRepresentable.swift */; };
 		FC0C99C72ABB130E00259897 /* PlaylistVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C99C62ABB130E00259897 /* PlaylistVM.swift */; };
 		FC0C99C92ABB131E00259897 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C99C82ABB131E00259897 /* Playlist.swift */; };
 		FC0C99CB2ABB1CEF00259897 /* PlaylistEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C99CA2ABB1CEF00259897 /* PlaylistEntryView.swift */; };
@@ -116,6 +118,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC01F86C2AD83AEB00E0F43B /* Date+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+RawRepresentable.swift"; sourceTree = "<group>"; };
+		FC01F86E2AD83BBF00E0F43B /* Array+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RawRepresentable.swift"; sourceTree = "<group>"; };
 		FC0C99C62ABB130E00259897 /* PlaylistVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistVM.swift; sourceTree = "<group>"; };
 		FC0C99C82ABB131E00259897 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		FC0C99CA2ABB1CEF00259897 /* PlaylistEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistEntryView.swift; sourceTree = "<group>"; };
@@ -474,6 +478,8 @@
 				FCEE7F1D2AC2B5A800505EF4 /* UITabBarController+.swift */,
 				FC4181652AC99964008A5E91 /* URLCache+.swift */,
 				FCEE7F252AC309CD00505EF4 /* View+.swift */,
+				FC01F86C2AD83AEB00E0F43B /* Date+RawRepresentable.swift */,
+				FC01F86E2AD83BBF00E0F43B /* Array+RawRepresentable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -784,6 +790,7 @@
 				FCABF84E2AB980E000B7E5BA /* AlbumVM.swift in Sources */,
 				FC0C99CB2ABB1CEF00259897 /* PlaylistEntryView.swift in Sources */,
 				FC76D1FE2ABC3853000A3A08 /* BannerCoverView.swift in Sources */,
+				FC01F86F2AD83BBF00E0F43B /* Array+RawRepresentable.swift in Sources */,
 				FC921E972ABD8CC400D711A4 /* PlaylistCoverService.swift in Sources */,
 				FCABF8662AB9823F00B7E5BA /* AlbumDetailView.swift in Sources */,
 				FCCF1E072AC7EC4000AD04DD /* ArtistRequest.swift in Sources */,
@@ -798,6 +805,7 @@
 				FCABF8232AB97C5200B7E5BA /* Device.swift in Sources */,
 				FC0C99CF2ABB225600259897 /* PlaylistDetailView.swift in Sources */,
 				FCD0683E2AC88DE200487232 /* ComposerListService.swift in Sources */,
+				FC01F86D2AD83AEB00E0F43B /* Date+RawRepresentable.swift in Sources */,
 				FC51F47B2AC8642500403DB5 /* ArtistPhotoService.swift in Sources */,
 				FC265DE72AC95F3500029802 /* GenreVM.swift in Sources */,
 				FC265DE52AC95E9500029802 /* AvgRating.swift in Sources */,

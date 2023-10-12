@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-//    @StateObject var store = UserStore.shared
-//    
+    @StateObject var store = UserStore.shared
+    
 //    private func setStore() {
 //        self.store.account = "Jon"
 //        self.store.host = "server.herculas.net"
