@@ -13,8 +13,8 @@ struct AlbumSongListView: View {
     var discs: [Int : [SongVM]]?
     
     init(songs: [SongVM]? = nil, discs: [Int : [SongVM]]? = nil) {
+        self.songs = songs
         if let songs = songs {
-            self.songs = songs
             self.discs = Dictionary(grouping: songs, by: { $0.disc })
         }
     }
@@ -43,8 +43,8 @@ struct AlbumSongListView: View {
     @ViewBuilder
     private func AlbumDiscView(disc: [SongVM]?) -> some View {
         if let tracks = disc {
-            ForEach(tracks) {
-                AlbumTrackView(track: $0, indent: $0 == tracks.last ? 0 : 38)
+            ForEach(tracks) { track in
+                AlbumTrackView(track: track, indent: track == tracks.last ? 0 : 38)
             }
         }
     }
@@ -78,9 +78,9 @@ struct AlbumSongListView: View {
         )
         .listSectionSeparator(.visible, edges: .top)
         .labelStyle(MultiRowLabelStyle())
-        .alignmentGuide(.listRowSeparatorLeading, computeValue: { dimension in
-            return indent
-        })
+        .alignmentGuide(.listRowSeparatorLeading) { _ in
+            indent
+        }
     }
 }
 

@@ -16,7 +16,7 @@ protocol Requestable {
     var resTimeout: Float { get }
     
     /// Issues requests for simple JSON files.
-    func issue<T: Codable>(request req: Request) -> AnyPublisher<T, NetworkError>
+    func issue<T: Codable>(request req: Request) -> AnyPublisher<Response<T>, NetworkError>
     
     /// Issues requests for images.
     func issue(request req: Request) -> AnyPublisher<UIImage, NetworkError>
@@ -26,7 +26,7 @@ class NetworkRequestable: NSObject, Requestable {
     var reqTimeout: Float = 30000
     var resTimeout: Float = 600000
     
-    func issue<T: Codable>(request req: Request) -> AnyPublisher<T, NetworkError> {
+    func issue<T: Codable>(request req: Request) -> AnyPublisher<Response<T>, NetworkError> {
         let sessionConfig = URLSessionConfiguration.default
         sessionConfig.timeoutIntervalForRequest = TimeInterval(req.timeout ?? self.reqTimeout)
         sessionConfig.timeoutIntervalForResource = TimeInterval(self.resTimeout)
@@ -40,7 +40,14 @@ class NetworkRequestable: NSObject, Requestable {
                 }
                 return data
             }
-            .decode(type: T.self, decoder: JSONDecoder())
+            .decode(type: Response<T>.self, decoder: JSONDecoder())
+            .tryMap { response in
+                guard response.error == nil else {
+                    print(response.error?.code ?? -1)
+                    throw NetworkError.apiError(code: response.error?.code ?? 0, error: "\(response.error?.code ?? 0)")
+                }
+                return response
+            }
             .mapError { error in
                 NetworkError.invalidJson(String(describing: error))
             }

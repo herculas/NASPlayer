@@ -7,6 +7,11 @@
 
 // MARK: - Response Wrapper
 struct Response<T: Codable>: Codable {
-    let data: T?
     let success: Bool?
+    let data: T?
+    let error: Error?
+    
+    struct Error: Codable {
+        let code: Int?
+    }
 }

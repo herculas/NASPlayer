@@ -9,30 +9,26 @@ import SwiftUI
 
 struct PlaylistSongListView: View {
     var songs: [SongVM]?
-    
+
     var body: some View {
         if let songs = self.songs {
-            ForEach(songs) { song in
-                PlaylistSongView(song: song)
-                    .labelStyle(MultiRowLabelStyle(width: 40))
-                    .alignmentGuide(.listRowSeparatorLeading) { viewDimensions in
-                        if song == songs.last {
-                            return 0
-                        } else {
-                            return 48
-                        }
-                    }
+            ForEach(songs) {
+                PlaylistTrackView(song: $0, indent: $0 == songs.last ? 0 : 48)
             }
         }
     }
 }
 
-struct PlaylistSongView: View {
+struct PlaylistTrackView: View {
+    
     var song: SongVM
+    var indent: CGFloat
+    
     @ObservedObject var songCoverService: SongCoverService
     
-    init(song: SongVM) {
+    init(song: SongVM, indent: CGFloat) {
         self.song = song
+        self.indent = indent
         self.songCoverService = SongCoverService(id: song.id)
     }
     
@@ -74,6 +70,10 @@ struct PlaylistSongView: View {
                 }
             }
         )
+        .labelStyle(MultiRowLabelStyle(width: 40))
+        .alignmentGuide(.listRowSeparatorLeading) { _ in
+            self.indent
+        }
     }
 }
 
